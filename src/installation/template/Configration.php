@@ -14,7 +14,7 @@
 					</div>
 					<div class="mb-5">
 						<label class="form-label">Database Password</label>
-						<input type="text" name="password" class="form-control" placeholder="Enter database password here...">
+						<input type="password" name="password" class="form-control" placeholder="Enter database password here...">
 					</div>
 					<div class="mb-10">
 						<label class="form-label">Database Name</label>
