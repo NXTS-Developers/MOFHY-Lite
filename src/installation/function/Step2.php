@@ -2,7 +2,7 @@
 ob_start();
 session_start();
 if(isset($_POST['submit'])){
-	include __DIR__."/config.php";
+	include __DIR__."/../modules/Database/Config.php";
 	$connect = mysqli_connect(
 	$DataBase['hostname'],
 	$DataBase['username'],
