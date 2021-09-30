@@ -27,6 +27,7 @@ Hustal features are listed below:
 - Enchanted Security. 
 - Support System. 
 - Admin Settings. 
+- Day/Night Mode. 
 - Standalone Setup. 
 - SMTP Support. 
 
