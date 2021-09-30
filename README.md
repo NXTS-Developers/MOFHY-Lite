@@ -43,8 +43,9 @@ Installation of hustal is much then you think
 - Extract it to your root folder of your domain. 
 - Open your browser and type ```http://yourdomain.com/src/``` an installation page will be appear. 
 - After clicking install you have to fill up your database details and click on validate. 
-- Fill up the clientarea name, clientarea URL:```http://example.com/src/```, clientarea email. 
-- Register and admin account. 
+- Fill up the clientarea name, clientarea URL:```http://example.com/src/```, clientarea email and click on next step. 
+- Register an admin account for free. 
+- Rename or remove installation directory form src directory. 
 - You can access admin panel ```http://example.com/src/admin/```. 
 - All done. 
 
