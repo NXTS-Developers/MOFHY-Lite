@@ -16,7 +16,7 @@ MOFHY Lite is a free of cost MOFH clientarea for account management and support 
 - [Copyright](#copyright)
 
 ## Features
-Hustal features are listed below:
+MOFHY Lite features are listed below:
 - Sign up / Login. 
 - Password Reset Functionality
 - Validation / Verification. 
@@ -32,13 +32,13 @@ Hustal features are listed below:
 - SMTP Support. 
 
 ## Requirements
-Your server need to met minimal requirements to run hustal
+Your server need to met minimal requirements to run MOFHY Lite:
 - php 7.0 or above
 - mysql 5.7 or above
 - openssl 1.2 or above 
 
 ## Installation 
-Installation of hustal is much then you think 
+Installation of MOFHY Lite is much then you think 
 - Download the ```MOFHY-Lite-dev.zip``` file. 
 - Extract it to your root folder of your domain. 
 - Open your browser and type ```http://yourdomain.com/src/``` an installation page will be appear. 
@@ -50,7 +50,7 @@ Installation of hustal is much then you think
 - All done. 
 
 ## Dependencies
-The following libraries are required to run hustal
+The following libraries are required to run MOFHY Lite:
 - phpmailer
 - mofh-client
 - guzzle
