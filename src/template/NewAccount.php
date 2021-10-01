@@ -47,7 +47,7 @@
 						</div>
 		        <label class="form-label required">Custom Domain Name</label>
 					<div class="input-group">
-					  <input type="text" name="domain" id="cudomain" class="form-control" placeholder="Search domain name here...">
+					  <input type="text" id="cudomain" class="form-control" placeholder="Search domain name here...">
 					  <div class="input-group-append">
 					  	<button name="submit" id="validate2" class="btn btn-primary">Validate</button>
 					  </div>
@@ -56,7 +56,7 @@
 			      <div id="SubDomain" class="tab-content">
 					<label class="form-label required">Subdomain Name</label>
 					<div class="input-group">
-					  <input type="text" name="domain" id="sudomain" class="form-control" placeholder="Search domain name here...">
+					  <input type="text" id="sudomain" class="form-control" placeholder="Search domain name here...">
 					  <div class="input-group-append">
 					    <select class="form-control" style="border-radius: 0" id="extension" name="extension">
 					    	<?php
