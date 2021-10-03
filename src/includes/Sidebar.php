@@ -40,7 +40,7 @@
 		      <span class="sidebar-icon bg-transparent">
 		        <i class="fa fa-bullhorn" aria-hidden="true"></i>
 		      </span>
-		      Support Tickets
+		      My Tickets
 		    </a>
 		    <a href="<?php echo $AreaInfo['area_url'];?>mysettings.php" class="sidebar-link sidebar-link-with-icon">
 		      <span class="sidebar-icon bg-transparent">
