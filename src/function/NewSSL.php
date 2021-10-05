@@ -70,7 +70,7 @@ if(isset($_POST['submit'])){
 	if(count($Data)>4){
 		$sql = mysqli_query($connect,"INSERT INTO `hosting_ssl`(`ssl_key`,`ssl_for`) VALUES ('".$Data['order_id']."','".$ClientInfo['hosting_client_key']."')");
 		if($sql){
-			$SSL = $AreaInfo['area_url'].'viewssl.php?ssl_id='.$FormData['order_id'];
+			$SSL = $AreaInfo['area_url'].'viewssl.php?ssl_id='.$Data['order_id'];
 			$EmailTo = [['email' => $FormData['email']],['email' => $AreaInfo['area_email']]];
 			$Body = "
 				<div class='container' style='margin-left:5%;margin-right:5%;margin-top:5%;'>
