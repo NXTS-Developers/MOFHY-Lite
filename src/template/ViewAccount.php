@@ -192,6 +192,30 @@
 			</div>
 			<div class="col-md-6">
 				<div class="d-flex justify-content-between align-items-center m-5">
+					<b>FTP Hostname:</b>
+					<span>NULL</span>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="d-flex justify-content-between align-items-center m-5">
+					<b>FTP Port:</b>
+					<span>NULL</span>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="d-flex justify-content-between align-items-center m-5">
+					<b>MySQL Hostname:</b>
+					<span>NULL</span>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="d-flex justify-content-between align-items-center m-5">
+					<b>Mysql Port:</b>
+					<span>NULL</span>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="d-flex justify-content-between align-items-center m-5">
 					<b>Nameserver 1:</b>
 					<span>NULL</span>
 				</div>
