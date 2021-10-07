@@ -29,7 +29,7 @@
 						<td><?php echo $AccountInfo['account_date'];?></td>
 						<td><?php 
 							if($AccountInfo['account_status']=='0'){
-								echo '<span class="badge bg-secondary badge-pill">Inactuve</span>';
+								echo '<span class="badge bg-secondary badge-pill">Inactive</span>';
 							} elseif($AccountInfo['account_status']=='1'){
 								echo '<span class="badge bg-success badge-pill">Active</span>';
 							} elseif($AccountInfo['account_status']=='2'){
