@@ -78,6 +78,30 @@
 			</div>
 			<div class="col-md-6">
 				<div class="d-flex justify-content-between align-items-center m-5">
+					<b>FTP Hostname:</b>
+					<span>ftpupload.net</span>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="d-flex justify-content-between align-items-center m-5">
+					<b>FTP Port:</b>
+					<span>21</span>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="d-flex justify-content-between align-items-center m-5">
+					<b>MySQL Hostname:</b>
+					<span>sqlxxx.byethost.net</span>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="d-flex justify-content-between align-items-center m-5">
+					<b>Mysql Port:</b>
+					<span>3306</span>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="d-flex justify-content-between align-items-center m-5">
 					<b>Nameserver 1:</b>
 					<span><?php echo $HostingApi['api_ns_1']?></span>
 				</div>
@@ -165,6 +189,30 @@
 				<div class="d-flex justify-content-between align-items-center m-5">
 					<b>Your IP:</b>
 					<span><?php echo UserInfo::get_ip()?></span>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="d-flex justify-content-between align-items-center m-5">
+					<b>FTP Hostname:</b>
+					<span>NULL</span>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="d-flex justify-content-between align-items-center m-5">
+					<b>FTP Port:</b>
+					<span>NULL</span>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="d-flex justify-content-between align-items-center m-5">
+					<b>MySQL Hostname:</b>
+					<span>NULL</span>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="d-flex justify-content-between align-items-center m-5">
+					<b>Mysql Port:</b>
+					<span>NULL</span>
 				</div>
 			</div>
 			<div class="col-md-6">
