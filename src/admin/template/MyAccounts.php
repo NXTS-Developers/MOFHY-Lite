@@ -29,15 +29,11 @@
 						<td><?php echo $AccountInfo['account_date'];?></td>
 						<td><?php 
 							if($AccountInfo['account_status']=='0'){
-								echo '<span class="badge bg-secondary badge-pill">Inactuve</span>';
+								echo '<span class="badge bg-secondary badge-pill">Inactive</span>';
 							} elseif($AccountInfo['account_status']=='1'){
 								echo '<span class="badge bg-success badge-pill">Active</span>';
 							} elseif($AccountInfo['account_status']=='2'){
 								echo '<span class="badge bg-danger badge-pill">Suspended</span>';
-							} elseif($AccountInfo['account_status']=='3'){
-								echo '<span class="badge bg-primary badge-pill">Processing</span>';
-							} elseif($AccountInfo['account_status']=='4'){
-								echo '<span class="badge bg-primary badge-pill">Deactivating</span>';
 							}
 						?></td>
 						<td><a href="<?php echo $AreaInfo['area_url'];?>admin/viewaccount.php?account_id=<?php echo $AccountInfo['account_username'];?>" class="btn btn-sm btn-secondary btn-rounded">Manage</a></td>
