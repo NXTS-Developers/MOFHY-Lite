@@ -29,7 +29,7 @@
 						<td><?php echo $ClientInfo['hosting_client_date'];?></td>
 						<td><?php 
 							if($ClientInfo['hosting_client_status']=='0'){
-								echo '<span class="badge bg-secondary badge-pill">Inactuve</span>';
+								echo '<span class="badge bg-secondary badge-pill">Inactive</span>';
 							} elseif($ClientInfo['hosting_client_status']=='1'){
 								echo '<span class="badge bg-success badge-pill">Active</span>';
 							} elseif($ClientInfo['hosting_client_status']=='2'){
