@@ -94,16 +94,10 @@
 			<div class="col-md-12">
 				<div class="row">
 					<?php
-						if($AccountInfo['account_status']=='3'){
-							echo '<div class="alert alert-secondary col-md-12"><i class="fa fa-cog fa-spin mr-5"></i>Your account is now processing and will be active within 5 minutes!</div>';
-						} elseif($AccountInfo['account_status']=='0'){
-							//echo '<div class="alert alert-secondary col-md-12">Your account is now inactive and will be deleted within 30 days!</div>'; if you are using premim hosting
+						if($AccountInfo['account_status']=='0'){
 							echo '<div class="alert alert-secondary col-md-12">Your account is now inactive and you need to create a new ticket inorder to delete this record!</div>';
 						} elseif($AccountInfo['account_status']=='2'){
-							//echo '<div class="alert alert-danger col-md-12">Your account is now suspended due to inactivity</div>';
 							echo '<div class="alert alert-secondary col-md-12">Your account is now suspended and you need to create a new ticket inorder to delete this record!</div>';
-						} elseif($AccountInfo['account_status']=='4'){
-							echo '<div class="alert alert-secondary col-md-12"><i class="fa fa-cog fa-spin mr-5"></i>Your account is now deactivating and will be deleted within 30 days</div>';
 						}
 					?>
 					<div class="col-md-4 px-5 text-center py-15">
@@ -150,11 +144,8 @@
 								echo '<span class="badge bg-success">Active</span>';
 							} elseif($AccountInfo['account_status']=='2'){
 								echo '<span class="badge bg-danger">Suspened</span>';;
-							} elseif($AccountInfo['account_status']=='3'){
-								echo '<span class="badge bg-primary">Processing</span>';
-							} elseif($AccountInfo['account_status']=='4'){
-								echo '<span class="badge bg-primary">Deactivating</span>';
-							}?>
+							} 
+                                                ?>
 					</span>
 				</div>
 			</div>
