@@ -4,14 +4,14 @@
             <h5 class="sidebar-title">Logged in as:</h5>
             <div class="sidebar-divider"></div>
             <a href="<?php echo $AreaInfo['area_url'];?>admin/myprofile.php" class="sidebar-link sidebar-link-with-icon">
-              <span class="sidebar-icon bg-secondary text-dark rounded-circle">
+              <span class="sidebar-icon bg-transparent text-dark rounded-circle">
                 <!--<i class="fa fa-user-circle" aria-hidden="true"></i>-->
                 <?php $Email = $AdminInfo['admin_email'];
                 $Default = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Twemoji_1f600.svg/440px-Twemoji_1f600.svg.png";
                 $Size = 30;
                 $Grav_URL = "https://www.gravatar.com/avatar/".md5(strtolower(trim($Email)))."?d=".urlencode($Default)."&s=".$Size;
                 ?>
-                <img class="rounded-circle" src="<?php echo $Grav_URL;?>" height="30px" width="30px">
+                <img class="rounded-circle" src="<?php echo $Grav_URL ?? 'Hello';?>" height="30px" width="30px">
               </span>
               <?php echo $AdminInfo['admin_fname']." ".$AdminInfo['admin_lname'];?>
             </a>
@@ -29,6 +29,12 @@
                 <i class="fa fa-users" aria-hidden="true"></i>
               </span>
               All Clients
+            </a>
+            <a href="<?php echo $AreaInfo['area_url'];?>admin/knowledgebase.php" class="sidebar-link sidebar-link-with-icon">
+              <span class="sidebar-icon bg-transparent">
+                <i class="fa fa-book" aria-hidden="true"></i>
+              </span>
+              Knowledgebase
             </a>
             <a href="<?php echo $AreaInfo['area_url'];?>admin/mytickets.php" class="sidebar-link sidebar-link-with-icon">
               <span class="sidebar-icon bg-transparent">
