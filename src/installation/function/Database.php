@@ -113,6 +113,13 @@ $sql = mysqli_query($connect,'CREATE TABLE IF NOT EXISTS `hosting_ticket_replies
 
 $sql = mysqli_query($connect,"INSERT INTO `hosting_smtp`(`smtp_key`, `smtp_host`, `smtp_username`, `smtp_password`, `smtp_port`, `smtp_from`) VALUES ('SMTP','smtp.gmail.com','example@gmail.com','example123','587','example@gmail.com')");
 
+$sql = mysqli_query($connect,'CREATE TABLE IF NOT EXISTS `hosting_knowledgebase` (
+  `knowledgebase_id` int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  `knowledgebase_subject` varchar(200) NOT NULL,
+  `knowledgebase_content` varchar(10000) NOT NULL,
+  `knowledgebase_date` varchar(20) NOT NULL
+)');
+
 $sql = mysqli_query($connect,"INSERT INTO `hosting_ssl_api`(`api_key`, `api_username`, `api_password`) VALUES ('FREESSL','example@gmail.com','SSL API Password')");
 
 $sql = mysqli_query($connect,"INSERT INTO `hosting_domain_extensions`(`extension_value`) VALUES ('.example.com')");
