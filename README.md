@@ -27,6 +27,7 @@ MOFHY Lite features are listed below:
 - Enchanted Security. 
 - Support System. 
 - Custom Template System. 
+- Knowledgebase System. 
 - Admin Settings. 
 - Day/Night Mode. 
 - Standalone Setup. 
