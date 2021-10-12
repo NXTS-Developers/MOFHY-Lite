@@ -45,7 +45,7 @@
 			    Welcome to Free Hosting!
 			  </h2>
 			  <p>
-			    Here you can create free of cost web hosting accounts and create free of cost unlimited websites on the fastest web servers in the world.
+			    Here you can create free web hosting accounts and create unlimited free websites on the fastest web servers in the world.
 			  </p>
 			  <div class="text-right">
 			    <a href="myaccounts.php" class="btn btn-sm">Getting Started</a>
@@ -58,7 +58,7 @@
 			    Free SSL Available!
 			  </h2>
 			  <p>
-			    Now generation of free ssl has been allowed inorder to provide fast website access and increase the security and protection of your website.
+			    Now free SSL generation has been provided inorder to provide fast website access and increase the security and protection of your website.
 			  </p>
 			  <div class="text-right">
 			    <a href="myssl.php" class="btn btn-sm">Check Now</a>

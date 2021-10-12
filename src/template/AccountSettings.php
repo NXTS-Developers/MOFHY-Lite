@@ -63,7 +63,7 @@
 					}
 					return true;
 				">
-				<p class="text-muted mx-10 alert alert-secondary">Your account will be deleted after 30 days of your account deactivation and all of the account data will be removed completely(This action cannot be undo).</p>
+				<p class="text-muted mx-10 alert alert-secondary">Your account will be deleted after 30 days of your account deactivation and all of the account data will be removed completely(This action cannot be undone).</p>
 				<div class="mb-10 px-10">
 					<label class="form-label required">Deacivation Reason</label>
 					<textarea name="reason" placeholder="Deactivation reason here..." class="form-control" id="reason"></textarea>
