@@ -32,10 +32,10 @@ if(isset($_POST['submit'])){
 				<div class='container' style='margin-left:5%;margin-right:5%;margin-top:5%;'>
 				<div style='border-radius:1px solid grey;border-radius:5px;box-shadow:1px 1px 5px grey;padding:20px;font-family: Arial, Helvetica, sans-serif;'>
 				<h2 style='text-align:center;color:skyblue;'><b>New Ticket</b></h2><hr>
-				<h3>Hi ".$ClientInfo['hosting_client_fname'].",</h3><p>You have opened a support ticket which will be processed soon once we receive notification it can take upto 2 hours.</p><br>
+				<h3>Hi ".$ClientInfo['hosting_client_fname'].",</h3><p>You have opened a support ticket which will be processed soon. It can take up to 2 hours.</p><br>
 				<center><a href='".$Ticket."' style='text-decoration:none;border:white;color:#fff;padding:10px 20px 10px 20px;background:orange;border-radius:5px;'>View Ticket</a></center>
 				<br>
-				<p>After login to your account you can use any service ❤</p>
+				<p>After you login to your account you can use any service ❤</p>
 				<p>Regards ".$AreaInfo['area_name']."</p>
 				<hr>
 				<h4 style='text-align:center;'><b>Need our help?</b></h4><p style='text-align:center'><a href='".$AreaInfo['area_url']."newticket.php' style='color:skyblue;text-decoration:none;margin:0;'>We are here to help you out!</a></p>

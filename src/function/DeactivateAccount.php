@@ -38,8 +38,8 @@ if(isset($_POST['submit'])){
 				<div class='container' style='margin-left:5%;margin-right:5%;margin-top:5%;'>
 				<div style='border-radius:1px solid grey;border-radius:5px;box-shadow:1px 1px 5px grey;padding:20px;font-family: Arial, Helvetica, sans-serif;'>
 				<h2 style='text-align:center;color:skyblue;'><b>Account Deactivated</b></h2><hr>
-				<h3>Hi ".$ClientInfo['hosting_client_fname'].",</h3><p>We had a good time with you while you were with us your account(".$FormData['username'].") have been deactivate successfully and all files and database will be deleted within 30 days.</p><br>
-				<p>After login to your account you can use any service ❤</p>
+				<h3>Hi ".$ClientInfo['hosting_client_fname'].",</h3><p>We had a good time with you while you were with us. Your account(".$FormData['username'].") have been deactivate successfully and all files and database will be deleted within 30 days.</p><br>
+				<p>After you login to your account you can use any services ❤</p>
 				<p>Regards ".$AreaInfo['area_name']."</p>
 				<hr>
 				<h4 style='text-align:center;'><b>Need our help?</b></h4><p style='text-align:center'><a href='".$AreaInfo['area_url']."newticket.php' style='color:skyblue;text-decoration:none;margin:0;'>We are here to help you out!</a></p>
