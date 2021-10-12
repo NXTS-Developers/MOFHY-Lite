@@ -39,7 +39,7 @@
 			        <button class="tab-item btn btn-sm" data-tab="CustomDomain">Custom Domain</button>
 		        </div>
 		        <div id="CustomDomain" class="tab-content">
-						<div class="alert alert-secondary my-5">You need to set given nameservers inorder to host domain with us<br>
+						<div class="alert alert-secondary my-5">You need to set these nameservers inorder to host your domain with us<br>
 							<ul class="mb-0">
 								<li class="mb-0"><?php echo $HostingApi['api_ns_1']?></li>
 								<li class="mb-0"><?php echo $HostingApi['api_ns_2']?></li>
