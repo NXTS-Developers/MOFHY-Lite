@@ -16,7 +16,7 @@ if(isset($_POST['reset'])){
 			<div class='container' style='margin-left:5%;margin-right:5%;margin-top:5%;'>
 			<div style='border-radius:1px solid grey;border-radius:5px;box-shadow:1px 1px 5px grey;padding:20px;font-family: Arial, Helvetica, sans-serif;'>
 			<h2 style='text-align:center;color:skyblue;'><b>Reset Password</b></h2><hr>
-			<h3>Hi ".$Data['hosting_client_fname'].",</h3><p>You have requested a password reset if you have not requested a password reset please let us know opening a support ticket in our hosting clientarea.</p><br>
+			<h3>Hi ".$Data['hosting_client_fname'].",</h3><p>You have requested a password reset. If you have not requested a password reset please let us know opening a support ticket in the hosting clientarea.</p><br>
 			<div style='margin:1rem;padding:1rem;background:rgb(230,230,230);overflow-x:auto;'>
 				".$Token."
 			</div>

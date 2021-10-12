@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
 				<h3>Hi there,</h3><p>You have received a reply from ".$ClientInfo['hosting_client_fname'].".</p><br>
 				<center><a href='".$Ticket."' style='text-decoration:none;border:white;color:#fff;padding:10px 20px 10px 20px;background:orange;border-radius:5px;'>View Ticket</a></center>
 				<br>
-				<p>After login to your account you can use any service ❤</p>
+				<p>After you login to your account you can use any service ❤</p>
 				<p>Regards ".$AreaInfo['area_name']."</p>
 				<hr>
 				<h4 style='text-align:center;'><b>Need our help?</b></h4><p style='text-align:center'><a href='".$AreaInfo['area_url']."newticket.php' style='color:skyblue;text-decoration:none;margin:0;'>We are here to help you out!</a></p>
