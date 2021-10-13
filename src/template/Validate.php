@@ -48,7 +48,7 @@
       		<div class="card p-15">
       			<h5 class="mb-0 px-5">Validate Account</h5><hr>
       			<div>
-      				<p><b>Note:</b> You need to verify this account inorder to use our free hosting and ssl services. A mail has been sent to your submitted email address(<?php echo '<samp>'.$ClientInfo['hosting_client_email'].'</samp>';?>) with validation key.</p>
+      				<p><b>Note:</b> You need to verify this account inorder to use our free hosting and ssl services. An email has been sent to your submitted email address(<?php echo '<samp>'.$ClientInfo['hosting_client_email'].'</samp>';?>) with validation key.</p>
       				<form action="function/Validate.php" method="post">
       					<div class="form-group">
       						<label class="form-label">Validation key</label>

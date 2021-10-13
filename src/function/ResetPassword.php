@@ -20,8 +20,8 @@ if(isset($_POST['reset'])){
 				<div class='container' style='margin-left:5%;margin-right:5%;margin-top:5%;'>
 				<div style='border-radius:1px solid grey;border-radius:5px;box-shadow:1px 1px 5px grey;padding:20px;font-family: Arial, Helvetica, sans-serif;'>
 				<h2 style='text-align:center;color:skyblue;'><b>Reset Password</b></h2><hr>
-				<h3>Hi ".$Data['hosting_client_fname'].",</h3><p>Your account password had ben reset successfully. please login to use our services again.</p><br>
-				<p>After login to your account you can use any service ❤</p>
+				<h3>Hi ".$Data['hosting_client_fname'].",</h3><p>Your account password had ben reset successfully. Please login to your account to use our services again.</p><br>
+				<p>After you login to your account you can use any service ❤</p>
 				<p>Regards ".$AreaInfo['area_name']."</p>
 				<hr>
 				<h4 style='text-align:center;'><b>Need our help?</b></h4><p style='text-align:center'><a href='".$AreaInfo['area_url']."newticket.php' style='color:skyblue;text-decoration:none;margin:0;'>We are here to help you out!</a></p>

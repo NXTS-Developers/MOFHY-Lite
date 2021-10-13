@@ -48,6 +48,6 @@
       		<div class="card p-15 text-center">
       			<h1 class="mb-0">Sorry!</h1>
 				<h5 class="mb-0">Account Suspended</h5>
-				<p>Your account has been suspended due to over usage of resources or due to any abuse of services please contact to your service adminstrator inorder to know the reason of suspention.</p>
+				<p>Your account has been suspended due to over usage of resources or due to abuse of services. Please open a support ticket inorder to know the reason of suspention.</p>
       		</div>
       	</div>

@@ -5,7 +5,7 @@
 				<div class="text-center">
 					<i class="fa fa-info-circle fa-5x icon-text"></i>
 					<h3 class="my-0">Oops!</h3>
-					<p class="mt-0">Sorry the service is temporarily closed due to maintaince and will be active soon please visit this site again after 24 hours.</p>
+					<p class="mt-0">Sorry the service is temporarily closed due to maintaince and will be active soon. Please visit this site again after 24 hours.</p>
 				</div>
 			</div>
 		</div>

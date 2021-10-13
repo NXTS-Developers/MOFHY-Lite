@@ -6,7 +6,7 @@
 		</div><hr>
 		<?php $AccountInfo = mysqli_fetch_assoc($sql);?>
 		<div class="mb-15">
-			<p>Now you are going to be redirected to the control panel. It can take upto 5 seconds based on your internet connecion speed.</p>
+			<p>You will now be redirected to the control panel. It can take up to 5 seconds based on your internet connecion speed.</p>
 			<form action="https://<?php echo $HostingApi['api_cpanel_url']?>/login.php" id="Login" method="post" name="login">
 			<input type="hidden" name="uname" value="<?php echo $AccountInfo['account_username'];?>" alt="username">
 			<input type="hidden" name="passwd" value="<?php echo $AccountInfo['account_password'];?>" alt="password">
