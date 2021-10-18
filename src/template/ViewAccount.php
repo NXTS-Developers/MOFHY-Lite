@@ -229,4 +229,32 @@
 		</div>
 		<?php }?>
 	</div>
+	<div class="card py-0">
+		<div class="d-flex justify-content-between align-items-center pt-15">
+			<h5 class="m-0">Account Domains</h5>
+		</div>
+		<hr>
+		<div class="mb-10">
+			<?php 
+			use \InfinityFree\MofhClient\Client;
+			if($AccountInfo['account_status']==1){
+				$client = Client::create();
+				$request = $client->getUserDomains(['username' => $AccountInfo['account_username']]);
+				$response = $request->send();
+				$res = $response->getDomains();
+				foreach($res as $domain){
+					$key = str_replace('\/','/', json_encode(['t'=>'ftp','c'=>['v'=>1,'p'=>$AccountInfo['account_password'],'i' => "/".$domain."/htdocs/"]]));
+					$link = "https://filemanager.ai/new/#/c/ftpupload.net/".$AccountInfo['account_username'].'/'.base64_encode($key);
+					echo "<div class='d-flex justify-content-between align-items-center m-5'>
+						<span>".$domain."</span>
+						<span><a href='".$link."' class='btn btn-sm btn-square btn-secondary' target='_blank'><i class='fa fa-file-import'></i></a></span>
+					</div>";
+				}
+			}
+			else{
+				echo "<p class='text-center'>No Domain Found</p>";
+			}
+			?>
+		</div>
+	</div>
 </div>
