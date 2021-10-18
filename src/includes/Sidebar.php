@@ -36,17 +36,17 @@
 		      </span>
 		      SSL Certificate
 		    </a>
-		    <a href="<?php echo $AreaInfo['area_url'];?>knowledgebase.php" class="sidebar-link sidebar-link-with-icon">
-		      <span class="sidebar-icon bg-transparent">
-		        <i class="fa fa-book" aria-hidden="true"></i>
-		      </span>
-		      Knowledgebase
-		    </a>
 		    <a href="<?php echo $AreaInfo['area_url'];?>mytickets.php" class="sidebar-link sidebar-link-with-icon">
 		      <span class="sidebar-icon bg-transparent">
 		        <i class="fa fa-bullhorn" aria-hidden="true"></i>
 		      </span>
-		      My Tickets
+		      Support Ticket
+		    </a>
+		    <a href="<?php echo $AreaInfo['area_url'];?>mytools.php" class="sidebar-link sidebar-link-with-icon">
+		      <span class="sidebar-icon bg-transparent">
+		        <i class="fa fa-tools" aria-hidden="true"></i>
+		      </span>
+		      Extra Tools
 		    </a>
 		    <a href="<?php echo $AreaInfo['area_url'];?>mysettings.php" class="sidebar-link sidebar-link-with-icon">
 		      <span class="sidebar-icon bg-transparent">
