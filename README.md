@@ -1,5 +1,5 @@
 ## MOFHY Lite
-MOFHY Lite is a free of cost MOFH clientarea for account management and support services with free ssl service. It have easy to use features and a much like WHMCS Digit UI interface. 
+MOFHY Lite is a free of cost MOFH clientarea for account management and support services with free ssl service. It has easy to use features much like the WHMCS Digit UI interface. 
 
 ![AppVeyor](https://img.shields.io/badge/Licence-MIT-lightgrey)
 ![AppVeyor](https://img.shields.io/badge/Version-v1.1.0-lightgrey)
@@ -17,21 +17,26 @@ MOFHY Lite is a free of cost MOFH clientarea for account management and support 
 
 ## Features
 MOFHY Lite features are listed below:
-- Sign up / Login. 
+- Sign up / Login 
 - Password Reset Functionality
-- Validation / Verification. 
-- Account Management. 
-- Account Settings. 
-- GoGetSSL Api Integration. 
-- MOFH Api Integration. 
-- Enchanted Security. 
-- Support System. 
-- Custom Template System. 
-- Knowledgebase System. 
-- Admin Settings. 
-- Day/Night Mode. 
-- Standalone Setup. 
-- SMTP Support. 
+- eMail Validation / Verification 
+- Account Management 
+- Account Settings 
+- GoGetSSL Api Integration 
+- MOFH Api Integration
+- Enchanted Security 
+- Support System 
+- Custom Template System 
+- Knowledgebase System
+- Admin Settings
+- Day/Night Mode
+- Standalone Setup 
+- SMTP Support 
+- Extra Client Tools
+  - WHOIS Lookup
+  - DNS Lookup
+  - CSR Generator
+  - CSR Decoder
 
 ## Requirements
 Your server need to met minimal requirements to run MOFHY Lite:
@@ -49,7 +54,7 @@ Installation of MOFHY Lite is much then you think
 - Register an admin account for free. 
 - Rename or remove installation directory form src directory. 
 - You can access admin panel ```http://example.com/src/admin/```. 
-- All done. 
+- All done! 
 
 ## Dependencies
 The following libraries are required to run MOFHY Lite:
