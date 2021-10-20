@@ -7,6 +7,7 @@ if(isset($_GET['account_id'])){
 	require_once __DIR__.'/handler/CookieHandler.php';
 	require_once __DIR__.'/handler/ValidationHandler.php';
 	require_once __DIR__.'/handler/HostingHandler.php';
+	require_once __DIR__.'/modules/autoload.php';
 	require_once __DIR__.'/modules/UserInfo/UserInfo.php';
 	require_once __DIR__.'/includes/Navbar.php';
 	require_once __DIR__.'/includes/Sidebar.php';
