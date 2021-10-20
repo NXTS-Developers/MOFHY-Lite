@@ -12,7 +12,7 @@ use InfinityFree\MofhClient\Message\PasswordRequest;
 use InfinityFree\MofhClient\Message\SuspendRequest;
 use InfinityFree\MofhClient\Message\UnsuspendRequest;
 use RuntimeException;
-require_once __DIR__.'/../../../../handler/HostingHandler.php';
+require __DIR__.'/../../../../handler/HostingHandler.php';
 
 define('API_USERNAME', $HostingApi['api_username']);
 define('API_PASSWORD', $HostingApi['api_password']);
