@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
 		header('location: ../newaccount.php');
 	}
 	else{
-		$sql = mysqli_query($connect,"SELECT * FROM `hosting_account` WHERE `account_for`='".$ClientInfo['hosting_client_key']."' AND `account_status`='1'");
+		$sql = mysqli_query($connect,"SELECT * FROM `hosting_account` WHERE `account_for`='".$ClientInfo['hosting_client_key']."'");
 		if(mysqli_num_rows($sql)<3){
 			$client = Client::create();
 			$request = $client->createAccount([
