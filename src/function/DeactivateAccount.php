@@ -54,7 +54,7 @@ if(isset($_POST['submit'])){
 										  <button class="close" data-dismiss="alert" type="button" aria-label="Close">
 										    <span aria-hidden="true">&times;</span>
 										  </button>
-										  Accoutn deactivated <b>successfully!</b>
+										  Account deactivated <b>successfully!</b>
 										</div>';
 				header('location: ../viewaccount.php?account_id='.$FormData['username']);
 				exit;
