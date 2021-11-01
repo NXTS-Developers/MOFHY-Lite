@@ -54,6 +54,7 @@ Installation of MOFHY Lite is much then you think
 - Register an admin account for free. 
 - Rename or remove installation directory form src directory. 
 - You can access admin panel ```http://example.com/src/admin/```. 
+- Set callback url ```http://example.com/src/callback/Callback.php```.
 - All done! 
 
 ## Dependencies
