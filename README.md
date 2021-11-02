@@ -69,5 +69,5 @@ The following libraries are required to run MOFHY Lite:
 ## Contributer
 The build is created and modified by [Mahtab Hassan](https://github.com/mahtab2003)
 ## Copyright
-Code Copyright 2021 MOFHY Lite. Code released under the MIT license.
+Code copyright 2021 MOFHY Lite. Code released under the MIT license.
 
