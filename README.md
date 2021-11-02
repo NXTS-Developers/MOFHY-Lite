@@ -61,7 +61,7 @@ Installation of MOFHY Lite is much then you think
 The following libraries are required to run MOFHY Lite:
 - phpmailer
 - mofh-client
-- guzzle
+- guzzlehttp
 - composer
 - user info
 - gogetssl
