@@ -40,9 +40,9 @@ MOFHY Lite features are listed below:
 
 ## Requirements
 Your server need to met minimal requirements to run MOFHY Lite:
-- php 7.0 or above
-- mysql 5.7 or above
-- openssl 1.2 or above 
+- PHP v7.0 or above.
+- MySQL v5.7 or above.
+- OpenSSL v1.2 or above. 
 
 ## Installation 
 Installation of MOFHY Lite is much then you think 
@@ -57,6 +57,12 @@ Installation of MOFHY Lite is much then you think
 - Set callback url ```http://example.com/src/callback/Callback.php```.
 - All done! 
 
+## SMTP
+Here are some widely used SMTP services, also compatible with MOFHY-Lite.
+- [Mailgun](https://www.mailgun.com/)
+- [Sendinblue](https://sendinblue.com/)
+- [SendClean](https://sendclean.com/)
+- [Mailjet](https://mailjet.com/)
 ## Dependencies
 The following libraries are required to run MOFHY Lite:
 - phpmailer
@@ -69,5 +75,5 @@ The following libraries are required to run MOFHY Lite:
 ## Contributer
 The build is created and modified by [Mahtab Hassan](https://github.com/mahtab2003)
 ## Copyright
-Code copyright 2021 MOFHY Lite. Code released under the MIT license.
+Code &copy; Copyright 2021 MOFHY Lite. Code released under the MIT license.
 
