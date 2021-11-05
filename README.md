@@ -72,6 +72,7 @@ Here are some widely used SMTP services, also compatible with MOFHY-Lite.
 - [Sendinblue](https://sendinblue.com/)
 - [SendClean](https://sendclean.com/)
 - [Mailjet](https://mailjet.com/)
+- [Yandex Mail](https://mail.yandex.com)
 
 ## Contributer
 The build is created and modified by [Mahtab Hassan](https://github.com/mahtab2003).
