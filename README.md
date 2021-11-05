@@ -65,6 +65,17 @@ The following libraries are required to run MOFHY Lite:
 - composer
 - user info
 - gogetssl
+- 
+## SMTP
+Here are some widely used SMTP services. They have a free plan with some limitations though, most importantly they are compatible with MOFHY-Lite.
+- [Mailgun](https://www.mailgun.com/)
+- [Sendinblue](https://sendinblue.com/)
+- [SendClean](https://sendclean.com/)
+- [Mailjet](https://mailjet.com/)
+- [Yandex 360](https://360.yandex.com)
+- [SendGrid](https://sendgrid.com/free/)
+- [SendPulse](https://sendpulse.com/features/smtp)
+- [ServersSMTP](https://serversmtp.com/get-free-emails/)
 
 ## SMTP
 Here are some widely used SMTP services, also compatible with MOFHY-Lite.
@@ -75,7 +86,9 @@ Here are some widely used SMTP services, also compatible with MOFHY-Lite.
 - [Yandex 360](https://360.yandex.com)
 
 ## Contributer
-The build is created and modified by [Mahtab Hassan](https://github.com/mahtab2003).
+This build is created, modified and maintained by [Mahtab Hassan](https://github.com/mahtab2003).
+## Copyright
+Code ©️ 2021 MOFHY Lite. Code released under the MIT license.
 
 ## Copyright
 Code ©️ Copyright 2021 MOFHY Lite. Code released under the MIT license.
