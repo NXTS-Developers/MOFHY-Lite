@@ -25,14 +25,14 @@ MOFHY Lite features are listed below:
 - GoGetSSL Api Integration 
 - MOFH Api Integration
 - Enchanted Security 
-- Support System 
+- Ticket Support System 
 - Custom Template System 
 - Knowledgebase System
 - Admin Settings
 - Day/Night Mode
 - Standalone Setup 
 - SMTP Support 
-- Extra Client Tools
+- Extra Tools For Clients
   - WHOIS Lookup
   - DNS Lookup
   - CSR Generator
@@ -40,9 +40,9 @@ MOFHY Lite features are listed below:
 
 ## Requirements
 Your server need to met minimal requirements to run MOFHY Lite:
-- php 7.0 or above
-- mysql 5.7 or above
-- openssl 1.2 or above 
+- PHP v7.0 or above.
+- MySQL v5.7 or above.
+- OpenSSL v1.2 or above. 
 
 ## Installation 
 Installation of MOFHY Lite is much then you think 
@@ -77,8 +77,18 @@ Here are some widely used SMTP services. They have a free plan with some limitat
 - [SendPulse](https://sendpulse.com/features/smtp)
 - [ServersSMTP](https://serversmtp.com/get-free-emails/)
 
+## SMTP
+Here are some widely used SMTP services, also compatible with MOFHY-Lite.
+- [Mailgun](https://www.mailgun.com/)
+- [Sendinblue](https://sendinblue.com/)
+- [SendClean](https://sendclean.com/)
+- [Mailjet](https://mailjet.com/)
+- [Yandex 360](https://360.yandex.com)
+
 ## Contributer
 This build is created, modified and maintained by [Mahtab Hassan](https://github.com/mahtab2003).
 ## Copyright
 Code ©️ 2021 MOFHY Lite. Code released under the MIT license.
 
+## Copyright
+Code ©️ Copyright 2021 MOFHY Lite. Code released under the MIT license.
