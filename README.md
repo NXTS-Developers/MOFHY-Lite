@@ -77,18 +77,8 @@ Here are some widely used SMTP services. They have a free plan with some limitat
 - [SendPulse](https://sendpulse.com/features/smtp)
 - [ServersSMTP](https://serversmtp.com/get-free-emails/)
 
-## SMTP
-Here are some widely used SMTP services, also compatible with MOFHY-Lite.
-- [Mailgun](https://www.mailgun.com/)
-- [Sendinblue](https://sendinblue.com/)
-- [SendClean](https://sendclean.com/)
-- [Mailjet](https://mailjet.com/)
-- [Yandex 360](https://360.yandex.com)
-
 ## Contributer
 This build is created, modified and maintained by [Mahtab Hassan](https://github.com/mahtab2003).
-## Copyright
-Code ©️ 2021 MOFHY Lite. Code released under the MIT license.
 
 ## Copyright
 Code ©️ Copyright 2021 MOFHY Lite. Code released under the MIT license.
