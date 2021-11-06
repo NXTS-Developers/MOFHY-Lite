@@ -35,7 +35,7 @@ if(isset($_POST['signup'])){
 				<div class='container' style='margin-left:5%;margin-right:5%;margin-top:5%;'>
 				<div style='border-radius:1px solid grey;border-radius:5px;box-shadow:1px 1px 5px grey;padding:20px;font-family: Arial, Helvetica, sans-serif;'>
 				<h2 style='text-align:center;color:skyblue;'><b>Verify Email</b></h2><hr>
-				<h3>Hi ".$FormData['fname'].",</h3><p>We'll like you to be a member of our service. Please copy the code from below inorder to verify your account.</p><br>
+				<h3>Hi ".$ClientInfo['hosting_client_fname'].",</h3><p>We'll like you to be a member of our service. Please copy the code from below inorder to verify your account.</p><br>
 				<div style='margin:1rem;padding:1rem;background:rgb(230,230,230);overflow-x:auto;'>
 					".$Token."
 				</div>
