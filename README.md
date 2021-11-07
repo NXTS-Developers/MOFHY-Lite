@@ -2,9 +2,10 @@
 MOFHY Lite is a free of cost MOFH clientarea for account management and support services with free ssl service. It has easy to use features much like the WHMCS Digit UI interface. 
 
 ![AppVeyor](https://img.shields.io/badge/Licence-MIT-lightgrey)
-![AppVeyor](https://img.shields.io/badge/Version-v1.1.0-lightgrey)
+![AppVeyor](https://img.shields.io/badge/Version-v1.0.5-lightgrey)
 ![AppVeyor](https://img.shields.io/badge/Build-passed-lightgreen)
 ![AppVeyor](https://img.shields.io/badge/Dependencies-php-lightgrey)
+![AppVeyor](https://img.shields.io/badge/Dependencies-mysql-lightgrey)
 ![AppVeyor](https://img.shields.io/badge/Interface-Digit-lightgrey)
 
 ## Table of Content 
