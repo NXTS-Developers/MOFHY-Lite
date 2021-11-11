@@ -46,17 +46,23 @@ Your server need to met minimal requirements to run MOFHY Lite:
 - OpenSSL v1.2 or above. 
 
 ## Installation 
-Installation of MOFHY Lite is much then you think 
+Installation of MOFHY Lite is much eaiser then you think!
 - Download the ```MOFHY-Lite-dev.zip``` file. 
-- Extract it to your root folder of your domain. 
+- Extract the .zip file to the root folder of your domain. 
+- Create an empty database for the project
 - Open your browser and type ```http://yourdomain.com/src/``` an installation page will be appear. 
-- After clicking install you have to fill up your database details and click on validate. 
-- Fill up the clientarea name, clientarea URL:```http://example.com/src/```, clientarea email and click on next step. 
+- After clicking "install" you have to fill out your database details and click on validate to connect to the database. 
+- Fill out the clientarea name, clientarea URL:```http://example.com/src/```, and clientarea email. Then click next. 
 - Register an admin account for free. 
-- Rename or remove installation directory form src directory. 
-- You can access admin panel ```http://example.com/src/admin/```. 
-- Set callback url ```http://example.com/src/callback/Callback.php```.
+- Rename or remove the "installation" directory form src directory. (This is super important!)
+- Access the admin panel at ```http://example.com/src/admin/```. 
+- Set callback url to ```http://example.com/src/callback/Callback.php``` in the MOFH Reseller panel (panel.myownfreehostnet).
+- Set up the API in "API Settings" in the admin area (```http://example.com/src/admin/```).
+- Set up the Domain Extensions (Free subdomains) in the admin panel (```http://example.com/src/admin/```).
 - All done! 
+
+## Extra Setup Steps
+- Create Knowledgebase articles for your webhost (```http://example.com/src/admin/```).
 
 ## Dependencies
 The following libraries are required to run MOFHY Lite:
