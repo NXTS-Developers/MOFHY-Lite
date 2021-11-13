@@ -6,11 +6,10 @@
 					var password = document.getElementById('password').value;
 					var cpassword = document.getElementById('cpassword').value;
 					if(password != cpassword){
-						alert('Password not match');
+						alert('Password does not match');
 						return false;
 					}
-					return true;
-				">
+					return true;">
 					<h5 class="m-0 text-center">Signup</h5><hr>
 					<div class="row">
 						<div class="col-6 px-5 mb-10">
@@ -33,7 +32,9 @@
 							<label class="form-label required">Confirm Password</label>
 							<input type="password" name="cpassword" id="cpassword" class="form-control" placeholder="Confirm Password...">
 						</div>
-	  					<div class="col-md-12 px-5 mb-10 d-grid">
+						<!-- PUT YOUR Google ReCaptcha SITE KEY HERE!-->
+                        <div class="g-recaptcha" data-sitekey="PUT YOUR Google ReCaptcha SITE KEY HERE!"></div>
+	  					<div class="col-md-12 px-5 mb-10 d-grid"><br>
 							<button class="btn btn-primary btn-block" name="signup">Signup</button>
 						</div>
 					</div>
@@ -45,5 +46,4 @@
 		</div>
 	</div>
 </div>
-<script type="text/javascript">
-</script>
+<script src='https://www.google.com/recaptcha/api.js' async defer></script>
