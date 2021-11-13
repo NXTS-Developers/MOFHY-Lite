@@ -33,7 +33,7 @@
 							<input type="password" name="cpassword" id="cpassword" class="form-control" placeholder="Confirm Password...">
 						</div>
 						<!-- PUT YOUR Google ReCaptcha SITE KEY HERE!-->
-                        <div class="g-recaptcha" data-sitekey="PUT YOUR Google ReCaptcha SITE KEY HERE!"></div>
+                        			<div class="g-recaptcha" data-sitekey="PUT YOUR Google ReCaptcha SITE KEY HERE!"></div>
 	  					<div class="col-md-12 px-5 mb-10 d-grid"><br>
 							<button class="btn btn-primary btn-block" name="signup">Signup</button>
 						</div>
