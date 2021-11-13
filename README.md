@@ -98,7 +98,7 @@ Here are some widely used SMTP services. They have a free plan with some limitat
 - [ServersSMTP](https://serversmtp.com/get-free-emails/)
 
 ## Contributer
-This build is created, modified and maintained by [Mahtab Hassan](https://github.com/mahtab2003).
+This build is created, modified and maintained by [Mahtab Hassan](https://github.com/mahtab2003) and [Greenreader9](https://github.com/greenreader9).
 
 ## Copyright
-Code ©️ Copyright 2021 MOFHY Lite. Code released under the MIT license.
+MOFHY Lite Code ©️ Copyright Mahtab Hassan; 2021. Code released under the MIT license.
