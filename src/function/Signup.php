@@ -1,6 +1,20 @@
 <?php
 require __DIR__.'/Connect.php';
 require_once __DIR__.'/../handler/AreaHandler.php';
+if(isset($_POST['g-recaptcha-response'])){
+    $captcha=$_POST['g-recaptcha-response'];
+}
+if(!$captcha){
+	$_SESSION['message'] = '<div class="alert alert-danger" role="alert">
+		 <button class="close" data-dismiss="alert" type="button" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	    Please check the <b>Captcha</b>!
+		</div>';
+	header('location: ../signup.php');
+	exit;
+}
+
 if(isset($_POST['signup'])){
 	$FormData = array(
 		'fname' => $_POST['first'],
@@ -16,6 +30,17 @@ if(isset($_POST['signup'])){
 		'date' => date('d-m-Y'),
 		'key' => rand(000000,999999)
 	);
+	
+	    // PUT YOUR Google ReCapcha SECRET KEY HERE!
+	    $secretKey = "PUT YOUR Google ReCapcha SECRET KEY HERE";
+        $ip = $_SERVER['REMOTE_ADDR'];
+        // post request to server
+        $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
+        $response = file_get_contents($url);
+        $responseKeys = json_decode($response,true);
+        // should return JSON with success as true
+        if($responseKeys["success"]) {
+	
 	$sql = mysqli_query($connect,"SELECT * FROM `hosting_clients` WHERE `hosting_client_email`='".$FormData['email']."' OR `hosting_client_key`='".$FormData['key']."'");
 	if(mysqli_num_rows($sql)>0){
 		$_SESSION['message'] = '<div class="alert alert-danger" role="alert">
@@ -74,4 +99,15 @@ if(isset($_POST['signup'])){
 else{
 	header('location: ../signup.php');
 }
+
+    } else {
+        $_SESSION['message'] = '<div class="alert alert-danger" role="alert">
+			<button class="close" data-dismiss="alert" type="button" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			Retry the <b>Captcha</b>!
+			</div>';
+	    header('location: ../signup.php');
+	    exit;
+    }
 ?>
