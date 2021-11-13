@@ -47,22 +47,35 @@ Your server need to met minimal requirements to run MOFHY Lite:
 
 ## Installation 
 Installation of MOFHY Lite is much eaiser then you think!
+
+**1. Install And Basic Setup**
 - Download the ```MOFHY-Lite-dev.zip``` file. 
 - Extract the .zip file to the root folder of your domain. 
 - Create an empty database for the project
-- Open your browser and type ```http://yourdomain.com/src/``` an installation page will be appear. 
+- Open your browser and type ```http://yourdomain.com/src/```, an installation page will be appear. 
 - After clicking "install" you have to fill out your database details and click on validate to connect to the database. 
 - Fill out the clientarea name, clientarea URL:```http://example.com/src/```, and clientarea email. Then click next. 
-- Register an admin account for free. 
-- Rename or remove the "installation" directory form src directory. (This is super important!)
+- Register an admin account. 
+- Rename or remove the "installation" directory from the main directory. (This is super important!)
 - Access the admin panel at ```http://example.com/src/admin/```. 
-- Set callback url to ```http://example.com/src/callback/Callback.php``` in the MOFH Reseller panel (panel.myownfreehostnet).
-- Set up the API in "API Settings" in the admin area (```http://example.com/src/admin/```).
 - Set up the Domain Extensions (Free subdomains) in the admin panel (```http://example.com/src/admin/```).
+
+**2. Setup APIs**
+- Set callback url to ```http://example.com/src/callback/Callback.php``` in the MOFH Reseller panel ([panel.myownfreehostnet](panel.myownfreehostnet)) under "SETUP API".
+- Set up the MOFH API in "API Settings" in the admin area (```http://example.com/src/admin/```) using info from [panel.myownfreehost.net](panel.myownfreehost.net).
+- Set up the GoGetSSL API in "API Settings" in the admin area (```http://example.com/src/admin/```).
+
+**3. Setup Google ReCapcha**
+- Get your Google ReCapcha Keys from [Google Developers](https://developers.google.com/_d/signin?continue=https%3A%2F%2Fdevelopers.google.com%2Frecaptcha%2F&prompt=select_account) (Take note of both the "Secret" and "Private" Keys.
+- Open the following files, and add your keys. Please READ the comments in the files, they tell you what key to put where.
+  - ```template/Login.php``` (Line 22)
+  - ```template/Signup.php``` (Line 36)
+  - ```function/Login.php``` (Line 24)
+  - ```function/Signup.php``` (Line 34)
 - All done! 
 
 ## Extra Setup Steps
-- Create Knowledgebase articles for your webhost (```http://example.com/src/admin/```).
+- Create Knowledgebase articles for your webhost in the admin area (```http://example.com/src/admin/```) if you wish.
 
 ## Dependencies
 The following libraries are required to run MOFHY Lite:
