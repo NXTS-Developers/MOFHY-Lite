@@ -72,7 +72,7 @@ The following libraries are required to run MOFHY Lite:
 - composer
 - user info
 - gogetssl
-- 
+
 ## SMTP
 Here are some widely used SMTP services. They have a free plan with some limitations though, most importantly they are compatible with MOFHY-Lite.
 - [Mailgun](https://www.mailgun.com/)
