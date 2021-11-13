@@ -101,4 +101,4 @@ Here are some widely used SMTP services. They have a free plan with some limitat
 This build is created, modified and maintained by [Mahtab Hassan](https://github.com/mahtab2003) and [Greenreader9](https://github.com/greenreader9).
 
 ## Copyright
-MOFHY Lite Code ©️ Copyright Mahtab Hassan; 2021. Code released under the MIT license.
+MOFHY Lite code ©️ 2021. Code released under the MIT license.
