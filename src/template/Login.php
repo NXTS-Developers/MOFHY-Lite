@@ -18,6 +18,8 @@
 					      <label for="remember-my-information">Remember me</label>
 					    </div>
 					  </div>
+					  <!-- PUT YOUR Google ReCaptcha SITE KEY HERE! -->
+					  <div class="g-recaptcha" data-sitekey="PUT YOUR Google ReCaptcha SITE KEY HERE!"></div><br>
   					<div class="mb-10 d-grid">
 						<button class="btn btn-primary btn-block" name="login">Login</button>
 					</div>
@@ -29,3 +31,4 @@
 		</div>
 	</div>
 </div>
+<script src='https://www.google.com/recaptcha/api.js' async defer></script>
