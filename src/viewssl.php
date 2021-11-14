@@ -1,6 +1,6 @@
 <?php
 if(isset($_GET['ssl_id'])){
-	$PageInfo = ['title'=>'View Ticket #'.$_GET['ssl_id'],'rel'=>''];
+	$PageInfo = ['title'=>'View SSL #'.$_GET['ssl_id'],'rel'=>''];
 	require_once __DIR__.'/includes/Connect.php';
 	require_once __DIR__.'/handler/AreaHandler.php';
 	require_once __DIR__.'/includes/Header.php';
