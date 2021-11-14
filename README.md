@@ -61,7 +61,7 @@ Installation of MOFHY Lite is much eaiser then you think!
 - Set up the Domain Extensions (Free subdomains) in the admin panel (```http://example.com/src/admin/```).
 
 **2. Setup APIs**
-- Set callback url to ```http://example.com/src/callback/Callback.php``` in the MOFH Reseller panel ([panel.myownfreehostnet](panel.myownfreehostnet)) under "SETUP API".
+- Set callback url to ```http://example.com/src/callback/Callback.php``` (Replace example.com with your own domain) in the MOFH Reseller panel ([panel.myownfreehostnet](panel.myownfreehostnet)) under "SETUP API".
 - Set up the MOFH API in "API Settings" in the admin area (```http://example.com/src/admin/```) using info from [panel.myownfreehost.net](panel.myownfreehost.net).
 - Set up the GoGetSSL API in "API Settings" in the admin area (```http://example.com/src/admin/```).
 
