@@ -3,7 +3,7 @@ require_once __DIR__.'/../includes/Connect.php';
 require_once __DIR__.'/AreaHandler.php';
 require __DIR__.'/../modules/phpmailer/PHPMailerAutoload.php'; 
 $sql = mysqli_query($connect,"SELECT * FROM `hosting_smtp` WHERE `smtp_key`='SMTP'");
-$SMTP = mysqli_fetch_Assoc($sql);
+$SMTP = mysqli_fetch_assoc($sql);
 $mail = new PHPMailer;
 $mail->SMTPDebug = false;
 $mail->isSMTP();
