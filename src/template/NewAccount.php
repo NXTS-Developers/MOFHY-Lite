@@ -103,8 +103,8 @@
 					</div>
 					<div class="col-md-6">
 						<div class="mb-10 px-10">
-							<label class="form-label required">Password</label>
-							<input type="password" name="password" placeholder="Enter your password here..." class="form-control" required="true">
+							<label class="form-label">Password</label>
+							<input type="password" name="password" placeholder="Leave empty to generate random" class="form-control">
 						</div>
 					</div>
 					<div class="col-md-6">
