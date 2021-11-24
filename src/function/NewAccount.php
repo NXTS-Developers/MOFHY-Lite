@@ -52,7 +52,7 @@ if(isset($_POST['submit'])){
 				exit;
 			}
 			elseif($Result['status']==1 && strlen($Result['message'])>1){
-				$sql = mysqli_query($connect,"INSERT INTO `hosting_account`(`account_username`, `account_password`, `account_key`, `account_domain`, `account_status`, `account_date`, `account_for`) VALUES ('".$Result['username']."','".$FormData['password']."','".$FormData['username']."','".$Result['domain']."','1','".$Result['date']."','".$ClientInfo['hosting_client_key']."')");
+				$sql = mysqli_query($connect,"INSERT INTO `hosting_account`(`account_username`, `account_password`, `account_key`, `account_domain`, `account_status`, `account_date`, `account_for`, `account_sql`) VALUES ('".$Result['username']."','".$FormData['password']."','".$FormData['username']."','".$Result['domain']."','1','".$Result['date']."','".$ClientInfo['hosting_client_key']."','NULL')");
 				if($sql){
 					$EmailTo = [['email' => $FormData['email']]];
 					$Body = "
