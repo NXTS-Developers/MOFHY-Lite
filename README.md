@@ -1,5 +1,5 @@
 ## MOFHY Lite
-MOFHY LITE is a priceless MyOwnFreeHost Client Area for account management, ticket support system and a free ssl service. It has easy to use features much like the WHMCS Digit UI interface. 
+MOFHY Lite is a priceless MyOwnFreeHost Client Area for account management, ticket support system and a free ssl service. It has easy to use features much like the WHMCS Digit UI interface. 
 
 ![AppVeyor](https://img.shields.io/badge/Licence-MIT-lightgrey)
 ![AppVeyor](https://img.shields.io/badge/Version-v1.0.5-lightgrey)
