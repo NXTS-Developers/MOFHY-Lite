@@ -1,6 +1,6 @@
 <?php
 if(isset($_GET['account_id'])){
-	$PageInfo = ['title'=>'Account Settings'.$_GET['account_id'],'rel'=>''];
+	$PageInfo = ['title'=>'Account Settings ('.$_GET['account_id'].')','rel'=>''];
 	require_once __DIR__.'/includes/Connect.php';
 	require_once __DIR__.'/handler/AreaHandler.php';
 	require_once __DIR__.'/includes/Header.php';
