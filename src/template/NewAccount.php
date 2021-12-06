@@ -98,13 +98,13 @@
 					<div class="col-md-6">
 						<div class="mb-10 px-10">
 							<label class="form-label required">Username</label>
-							<input type="text" name="username" placeholder="Auto implement" class="form-control disabled" readonly>
+							<input type="text" name="username" placeholder="(generated automatically)" class="form-control disabled" readonly>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="mb-10 px-10">
 							<label class="form-label">Password</label>
-							<input type="password" name="password" placeholder="Leave empty to generate random" class="form-control">
+							<input type="password" name="password" placeholder="Something unique, leave empty to generate random" class="form-control">
 						</div>
 					</div>
 					<div class="col-md-6">
