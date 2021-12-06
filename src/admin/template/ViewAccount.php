@@ -130,7 +130,6 @@
 					<div class="col-md-4 offset-md-4 px-20 py-5 text-center text-md-right">
 						<a href="#" target="_blank" class="btn btn-success text-white btn-block my-5 btn-rounded disabled">Control Panel</a>
 						<a href="#" target="_blank" class="btn btn-primary text-white btn-block my-5 btn-rounded disabled"></pre>File Manager</a>
-						<a href="newticket.php" target="_blank" class="btn btn-secondary btn-block my-5 btn-rounded">Open Ticket</a>
 					</div>
 				</div>
 			</div>
