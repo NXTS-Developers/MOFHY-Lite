@@ -41,9 +41,9 @@ MOFHY Lite features are listed below:
 
 ## Requirements
 Your server need to met minimal requirements to run MOFHY Lite:
-- PHP v7.0 or above.
-- MySQL v5.7 or above.
-- OpenSSL v1.2 or above. 
+- PHP v5.6 or above.
+- MySQL v5.2 or above.
+- OpenSSL v1.1 or above. 
 
 ## Installation 
 Installation of MOFHY Lite is much eaiser then you think!
