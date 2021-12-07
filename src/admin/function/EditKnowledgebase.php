@@ -5,8 +5,8 @@ require_once __DIR__.'/../handler/AreaHandler.php';
 if(isset($_POST['submit'])){
 	$FormData = array(
 		'id' => $_POST['id'],
-		'subject' => $_POST['subject'],
-		'content' => $_POST['editor']
+		'subject' => $connect->real_escape_string($_POST['subject']),
+		'content' => $connect->real_escape_string($_POST['editor'])
 	);
 	$sql = mysqli_query($connect,"UPDATE `hosting_knowledgebase` SET `knowledgebase_subject`='".$FormData['subject']."',`knowledgebase_content`='".$FormData['content']."' WHERE `knowledgebase_id`='".$FormData['id']."'");
 	if($sql){
