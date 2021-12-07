@@ -4,8 +4,8 @@ require __DIR__.'/../handler/SessionHandler.php';
 require_once __DIR__.'/../handler/AreaHandler.php';
 if(isset($_POST['submit'])){
 	$FormData = array(
-		'subject' => $_POST['subject'],
-		'content' => $_POST['editor'],
+		'subject' => $connect->real_escape_string($_POST['subject']),
+		'content' => $connect->real_escape_string($_POST['editor']),
 		'date' => date('d-m-Y')
 	);
 	$sql = mysqli_query($connect,"INSERT INTO `hosting_knowledgebase`(`knowledgebase_subject`,`knowledgebase_date`,`knowledgebase_content`) VALUES ('".$FormData['subject']."','".$FormData['date']."','".$FormData['content']."')");
