@@ -15,7 +15,7 @@
 					</div>
 					<div class="col-md-4 offset-md-4 px-20 py-5 text-center text-md-right">
 						<a href="cplogin.php?account_id=<?php echo $AccountInfo['account_username']?>" target="_blank" class="btn btn-success text-white btn-block my-5 btn-rounded">Control Panel</a>
-						<a href="https://filemanager.ai/new/#/c/ftpupload.net/<?php echo $AccountInfo['account_username'].'/'.base64_encode(json_encode(['t'=>'ftp','c'=>['v'=>1,'p'=>$AccountInfo['account_password']]]));?>" target="_blank" class="btn btn-primary text-white btn-block my-5 btn-rounded"></pre>File Manager</a>
+						<a href="https://filemanager.ai/new/#/c/<?php echo str_replace('cpanel', 'ftp', $HostingApi['api_cpanel_url']). '/'. $AccountInfo['account_username'].'/'.base64_encode(json_encode(['t'=>'ftp','c'=>['v'=>1,'p'=>$AccountInfo['account_password']]]));?>" target="_blank" class="btn btn-primary text-white btn-block my-5 btn-rounded"></pre>File Manager</a>
 						<a href="settings.php?account_id=<?php echo $AccountInfo['account_username']?>" target="_blank" class="btn btn-secondary btn-block my-5 btn-rounded">Edit Settings</a>
 					</div>
 				</div>
@@ -40,7 +40,7 @@
 			</div>
 			<div class="col-md-6">
 				<div class="d-flex justify-content-between align-items-center m-5">
-					<b>Cpanel Domain:</b>
+					<b>cPanel Domain:</b>
 					<span><?php echo $HostingApi['api_cpanel_url']?></span>
 				</div>
 			</div>
@@ -79,7 +79,7 @@
 			<div class="col-md-6">
 				<div class="d-flex justify-content-between align-items-center m-5">
 					<b>FTP Hostname:</b>
-					<span>ftpupload.net</span>
+					<span><?php echo str_replace('cpanel', 'ftp', $HostingApi['api_cpanel_url'])?></span>
 				</div>
 			</div>
 			<div class="col-md-6">
@@ -244,7 +244,7 @@
 				$res = $response->getDomains();
 				foreach($res as $domain){
 					$key = str_replace('\/','/', json_encode(['t'=>'ftp','c'=>['v'=>1,'p'=>$AccountInfo['account_password'],'i' => "/".$domain."/htdocs/"]]));
-					$link = "https://filemanager.ai/new/#/c/ftpupload.net/".$AccountInfo['account_username'].'/'.base64_encode($key);
+					$link = "https://filemanager.ai/new/#/c/". str_replace('cpanel', 'ftp', $HostingApi['api_cpanel_url']). '/'. $AccountInfo['account_username'].'/'.base64_encode($key);
 					echo "<div class='d-flex justify-content-between align-items-center m-5'>
 						<span>".$domain."</span>
 						<span><a href='".$link."' class='btn btn-sm btn-square btn-secondary' target='_blank'><i class='fa fa-file-import'></i></a></span>
