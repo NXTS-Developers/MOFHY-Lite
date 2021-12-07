@@ -5,8 +5,8 @@ require_once __DIR__.'/../handler/AreaHandler.php';
 if(isset($_POST['submit'])){
 	$FormData = array(
 		'email' => $_POST['email'],
-		'subject' => str_rot13($_POST['subject']),
-		'content' => str_rot13($_POST['editor']),
+		'subject' => $connect->real_escape_string(str_rot13($_POST['subject'])),
+		'content' => $connect->real_escape_string(str_rot13($_POST['editor'])),
 		'department' => $_POST['department'],
 		'for' => $ClientInfo['hosting_client_key'],
 		'unique_id' => rand(000000,999999),
