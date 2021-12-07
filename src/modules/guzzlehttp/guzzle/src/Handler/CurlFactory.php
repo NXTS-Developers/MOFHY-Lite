@@ -194,7 +194,7 @@ class CurlFactory implements CurlFactoryInterface
             );
         }
 
-        $message = \sprintf(
+        /*$message = \sprintf(
             'cURL error %s: %s (%s)',
             $ctx['errno'],
             $ctx['error'],
@@ -203,12 +203,12 @@ class CurlFactory implements CurlFactoryInterface
         $uriString = (string) $easy->request->getUri();
         if ($uriString !== '' && false === \strpos($ctx['error'], $uriString)) {
             $message .= \sprintf(' for %s', $uriString);
-        }
+        }*/
 
         // Create a connection exception if it was a specific error code.
         $error = isset($connectionErrors[$easy->errno])
-            ? new ConnectException($message, $easy->request, null, $ctx)
-            : new RequestException($message, $easy->request, $easy->response, null, $ctx);
+            ? new ConnectException("Error while connecting to the host" , $easy->request, null, $ctx)
+            : new RequestException("Invalid Request" , $easy->request, $easy->response, null, $ctx);
 
         return P\Create::rejectionFor($error);
     }
