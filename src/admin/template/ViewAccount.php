@@ -15,7 +15,7 @@
 					</div>
 					<div class="col-md-4 offset-md-4 px-20 py-5 text-center text-md-right">
 						<a href="cplogin.php?account_id=<?php echo $AccountInfo['account_username']?>" target="_blank" class="btn btn-success text-white btn-block my-5 btn-rounded">Control Panel</a>
-						<a href="https://filemanager.ai/new/#/c/ftpupload.net/<?php echo $AccountInfo['account_username'].'/'.base64_encode(json_encode(['t'=>'ftp','c'=>['v'=>1,'p'=>$AccountInfo['account_password']]]));?>" target="_blank" class="btn btn-primary text-white btn-block my-5 btn-rounded"></pre>File Manager</a>
+						<a href="https://filemanager.ai/new/#/c/<?php echo str_replace('cpanel', 'ftp', $HostingApi['api_cpanel_url']). '/'. $AccountInfo['account_username'].'/'.base64_encode(json_encode(['t'=>'ftp','c'=>['v'=>1,'p'=>$AccountInfo['account_password']]]));?>" target="_blank" class="btn btn-primary text-white btn-block my-5 btn-rounded"></pre>File Manager</a>
 						<a href="settings.php?account_id=<?php echo $AccountInfo['account_username']?>" target="_blank" class="btn btn-secondary btn-block my-5 btn-rounded">Edit Settings</a>
 					</div>
 				</div>
@@ -79,7 +79,7 @@
 			<div class="col-md-6">
 				<div class="d-flex justify-content-between align-items-center m-5">
 					<b>FTP Hostname:</b>
-					<span>ftpupload.net</span>
+					<span><?php echo str_replace('cpanel', 'ftp', $HostingApi['api_cpanel_url'])?></span>
 				</div>
 			</div>
 			<div class="col-md-6">
@@ -91,7 +91,7 @@
 			<div class="col-md-6">
 				<div class="d-flex justify-content-between align-items-center m-5">
 					<b>MySQL Hostname:</b>
-					<span>sqlxxx.byethost.net</span>
+					<span><?php echo str_replace('cpanel', 'sqlxxx', $HostingApi['api_cpanel_url'])?></span>
 				</div>
 			</div>
 			<div class="col-md-6">
@@ -119,9 +119,9 @@
 				<div class="row">
 					<?php
 						if($AccountInfo['account_status']=='0'){
-							echo '<div class="alert alert-secondary col-md-12">Your account is now inactive and you need to create a new ticket inorder to delete this record!</div>';
+							echo '<div class="alert alert-secondary col-md-12">This account is inactive.</div>';
 						} elseif($AccountInfo['account_status']=='2'){
-							echo '<div class="alert alert-secondary col-md-12">Your account is now suspended and you need to create a new ticket inorder to delete this record!</div>';
+							echo '<div class="alert alert-secondary col-md-12">This account has been suspended.</div>';
 						}
 					?>
 					<div class="col-md-4 px-5 text-center py-15">
