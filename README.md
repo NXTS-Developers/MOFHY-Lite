@@ -84,6 +84,10 @@ Here are some widely used SMTP services. They have a free plan with some limitat
 - [SendPulse](https://sendpulse.com/features/smtp)
 - [ServersSMTP](https://serversmtp.com/get-free-emails/)
 
+## Extensions
+- [MOFHY PRO](https://getmofhy.eu.org)
+- [MOFHY PLUS](https://mofhyplus.rf.gd)
+
 ## Contributer
 This build is created, modified and maintained by [Mahtab Hassan](https://github.com/mahtab2003).
 
