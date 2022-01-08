@@ -24,8 +24,7 @@ MOFHY Lite features are listed below:
 - Account Management 
 - Account Settings 
 - GoGetSSL Api Integration 
-- MOFH Api Integration
-- Enchanted Security 
+- MOFH Api Integration 
 - Ticket Support System 
 - Custom Template System 
 - Knowledgebase System
