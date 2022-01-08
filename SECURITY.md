@@ -2,15 +2,13 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+There is the list of supported versions of php to run MOFHY Lite
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :white_check_mark: |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :white_check_mark: |
+| > 7.4   | :x:                |
+| 7.1.x   | :green_check_mark: |
+| < 5.6   | :white_check_mark: |
 
 ## Reporting a Vulnerability
 
