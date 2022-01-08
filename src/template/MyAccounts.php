@@ -1,3 +1,4 @@
+<?php include _DIR_."/../modules/autoload.php"; use \InfinityFree\MofhClient\Client;?>
 <div class="container-fluid">
 	<div class="card py-0">
 		<div class="d-flex justify-content-between align-items-center pt-15">
@@ -25,7 +26,13 @@
 					<tr>
 						<td>#<?php $Count = $Count ?? 1;echo $Count;$Count += 1;?></td>
 						<td><?php echo $AccountInfo['account_username'];?></td>
-						<td><?php echo $AccountInfo['account_domain'];?></td>
+						<td><?php $client = Client::create();
+				$request = $client->getUserDomains(['username' => $AccountInfo['account_username']]);
+				$response = $request->send();
+				$res = $response->getDomains();
+				foreach($res as $domain){
+					echo $domain."\n";
+				}?></td>
 						<td><?php echo $AccountInfo['account_date'];?></td>
 						<td><?php 
 							if($AccountInfo['account_status']=='0'){
