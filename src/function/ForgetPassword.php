@@ -3,7 +3,7 @@ require __DIR__.'/Connect.php';
 include __DIR__.'/../handler/AreaHandler.php';
 if(isset($_POST['reset'])){
 	$FormData = array(
-		'email' => $_POST['email']
+		'email' => htmlentities(mysqli_real_escape_string($connect, $_POST['email']))
 	);
 	$sql = mysqli_query($connect,"SELECT * FROM `hosting_clients` WHERE `hosting_client_email`='".$FormData['email']."'");
 	if(mysqli_num_rows($sql)>0){

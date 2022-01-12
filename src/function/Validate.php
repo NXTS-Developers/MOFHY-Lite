@@ -3,7 +3,7 @@ require __DIR__.'/Connect.php';
 require __DIR__.'/../handler/CookieHandler.php';
 if(isset($_POST['validate'])){
 	$FormData = array(
-		'token' => '$2y$10$'.$_POST['validation_key'],
+		'token' => mysqli_real_escape_string($connect, '$2y$10$'.$_POST['validation_key']),
 		'key' => $ClientInfo['hosting_client_key'],
 	);
 	if(password_verify($FormData['key'], $FormData['token'])){

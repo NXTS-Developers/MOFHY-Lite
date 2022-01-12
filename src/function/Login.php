@@ -3,18 +3,17 @@ require __DIR__.'/Connect.php';
 if(isset($_POST['login'])){
 	$FormData = array(
 		'email' => $_POST['email'],
-		'password' => $_POST['password'],
-		'email_hashed' => base64_encode($_POST['email'])
+		'password' => $_POST['password']
 	);
 	$sql = mysqli_query($connect,"SELECT * FROM `hosting_clients` WHERE `hosting_client_email`='".$FormData['email']."'");
 	if(mysqli_num_rows($sql)>0){
 		$Data = mysqli_fetch_assoc($sql);
 		if($Data['hosting_client_password']==sha1($FormData['password'])){
 			if(isset($_POST['remember'])){
-				setcookie('LEFSESS',$FormData['email_hashed'],time()+30*86400,'/');
+				setcookie('LEFSESS',base64_encode($Data['hosting_client_key']),time()+30*86400,'/');
 			}
 			else{
-				setcookie('LEFSESS',$FormData['email_hashed'],time()+86400,'/');
+				setcookie('LEFSESS',base64_encode($Data['hosting_client_key']),time()+86400,'/');
 			}
 			$_SESSION['message'] = '<div class="alert alert-success" role="alert">
 									  <button class="close" data-dismiss="alert" type="button" aria-label="Close">

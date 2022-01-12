@@ -3,9 +3,9 @@ require __DIR__.'/Connect.php';
 require_once __DIR__.'/../handler/AreaHandler.php';
 if(isset($_POST['signup'])){
 	$FormData = array(
-		'fname' => $_POST['first'],
-		'lname' => $_POST['last'],
-		'email' => $_POST['email'],
+		'fname' => htmlentities(mysqli_real_escape_string($connect, $_POST['first'])),
+		'lname' => htmlentities(mysqli_real_escape_string($connect, $_POST['last'])),
+		'email' => htmlentities(mysqli_real_escape_string($connect, $_POST['email'])),
 		'company' => 'NULL',
 		'country' => 'NULL',
 		'city' => 'NULL',
