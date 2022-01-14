@@ -2,7 +2,7 @@
 require __DIR__.'/Connect.php';
 if(isset($_POST['login'])){
 	$FormData = array(
-		'email' => _string($connect, $_POST['email']),
+		'email' => mysql_rea_escape_string($connect, $_POST['email']),
 		'password' => $_POST['password']
 	);
 	$sql = mysqli_query($connect,"SELECT * FROM `hosting_clients` WHERE `hosting_client_email`='".$FormData['email']."'");
