@@ -1,8 +1,8 @@
 <?php
 if(isset($_SESSION['LEASESS'])){
-	$sql = mysqli_query($connect,"SELECT * FROM `hosting_admin` WHERE `admin_email`='".base64_decode($_SESSION['LEASESS'])."'");
+	$sql = mysqli_query($connect,"SELECT * FROM `hosting_admin` WHERE `admin_key`='".base64_decode($_SESSION['LEASESS'])."'");
 	if(mysqli_num_rows($sql)>0){
-		$AdminInfo = mysqli_fetch_Assoc($sql);
+		$AdminInfo = mysqli_fetch_assoc($sql);
 	}
 	else{
 		unset($_SESSION['LEASESS']);
