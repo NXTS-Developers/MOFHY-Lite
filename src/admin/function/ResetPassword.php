@@ -3,8 +3,8 @@ include __DIR__.'/Connect.php';
 require_once __DIR__.'/../handler/AreaHandler.php';
 if(isset($_POST['reset'])){
 	$FormData = array(
-		'token' => $_POST['token'],
-		'new_password' => $_POST['password'],
+		'token' =>mysqli_real_escape_string($connect, $_POST['token']),
+		'new_password' =>mysqli_real_escape_string($connect, $_POST['password']),
 		'hashed_password' => sha1($_POST['password']),
 	);
 	$UserID = json_decode(base64_decode($_POST['token']));

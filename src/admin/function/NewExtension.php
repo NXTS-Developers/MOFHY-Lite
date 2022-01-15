@@ -3,7 +3,7 @@ require __DIR__.'/Connect.php';
 require __DIR__.'/../handler/SessionHandler.php';
 if(isset($_POST['submit'])){
 	$FormData = array(
-		'domain' => $_POST['domain'],
+		'domain' => mysqli_real_escape_string($connect, strtolower($_POST['domain'])),
 	);
 	$sql = mysqli_query($connect,"SELECT * FROM `hosting_domain_extensions` WHERE `extension_value`='".$FormData['domain']."'");
 	if(mysqli_num_rows($sql)>0){

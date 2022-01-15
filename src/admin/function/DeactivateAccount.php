@@ -6,9 +6,10 @@ require_once __DIR__.'/../modules/autoload.php';
 use \InfinityFree\MofhClient\Client;
 if(isset($_POST['submit'])){
 	$FormData = array(
-		'username' => $_POST['account_username'],
-		'key' => strtolower($_POST['account_key']),
-		'reason' => $_POST['reason']
+		'username' => mysqli_real_escape_string($connect, $_POST['account_username']),
+		'key' => mysqli_real_escape_string($connect, strtolower($_POST['account_key'])),
+		'reason' => mysqli_real_escape_string($connect, 
+		$_POST['reason'])
 	);
 	$client = Client::create();
 	$request = $client->suspend([

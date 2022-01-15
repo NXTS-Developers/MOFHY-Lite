@@ -4,7 +4,7 @@ require __DIR__.'/../handler/SessionHandler.php';
 require_once __DIR__.'/../handler/AreaHandler.php';
 if(isset($_POST['submit'])){
 	$FormData = array(
-		'id' => $_POST['id'],
+		'id' => mysqli_real_escape_string($connect, $_POST['id']),
 		'subject' => $connect->real_escape_string($_POST['subject']),
 		'content' => $connect->real_escape_string($_POST['editor'])
 	);

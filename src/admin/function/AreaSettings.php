@@ -3,9 +3,10 @@ require __DIR__.'/Connect.php';
 require __DIR__.'/../handler/SessionHandler.php';
 if(isset($_POST['submit'])){
 	$FormData = array(
-    'name' => $_POST['name'],
-    'url' => $_POST['url'],
-    'email' => $_POST['email'],
+    'name' => mysqli_real_escape_string($connect, $_POST['name']),
+    'url' => mysqli_real_escape_string($connect, $_POST['url']),
+    'email' => mysqli_real_escape_string($connect, 
+    $_POST['email']),
     'status' => $_POST['status']
 	);
 	$sql = mysqli_query($connect,"UPDATE `hosting_area` SET `area_name`='".$FormData['name']."',`area_url`='".$FormData['url']."',`area_email`='".$FormData['email']."',`area_status`='".$FormData['status']."' WHERE `area_key`='AREA'");

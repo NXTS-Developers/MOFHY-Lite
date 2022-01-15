@@ -2,7 +2,7 @@
 require __DIR__.'/Connect.php';
 require __DIR__.'/../SessionHandler.php';
 if(isset($_GET['client_id'])){
-	$sql = mysqli_query($connect,"SELECT * FROM `hosting_clients` WHERE `hosting_client_key`='".$_GET['client_id']."'");
+	$sql = mysqli_query($connect,"SELECT * FROM `hosting_clients` WHERE `hosting_client_key`='".mysqli_real_escape_string($connect, $_GET['client_id'])."'");
 	if(mysqli_num_rows($sql)>0){
 		$Data = mysqli_fetch_assoc($sql);
 		setcookie('LEFSESS',base64_encode($Data['hosting_client_key']),time()+86400,'/');

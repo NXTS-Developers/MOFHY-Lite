@@ -3,10 +3,10 @@ require __DIR__.'/Connect.php';
 require_once __DIR__.'/../handler/AreaHandler.php';
 if(isset($_POST['submit'])){
 	$FormData = array(
-		'content' => str_rot13($_POST['editor']),
+		'content' =>mysqli_real_escape_string($connect, str_rot13($_POST['editor'])),
 		'from' => 999999,
-		'for' => $_POST['ticket_id'],
-		'email' => $_POST['ticket_email'],
+		'for' => mysqli_real_escape_string($connect, $_POST['ticket_id']),
+		'email' => mysqli_real_escape_string($connect, $_POST['ticket_email']),
 		'date' => date('d-m-Y')
 	);
 	$sql = mysqli_query($connect,"UPDATE `hosting_tickets` SET `ticket_status`='1' WHERE `ticket_unique_id`='".$FormData['for']."'");
