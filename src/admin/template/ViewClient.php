@@ -1,7 +1,7 @@
 <div class="container-fluid">
 	<div class="card py-20">
 		<div class="d-flex justify-content-between align-items-center ">
-			<p class="m-0"><b>My Profile</b></p>
+			<p class="m-0"><b>Client Information</b></p>
 			<a href="<?php echo $AreaInfo['area_url'];?>admin/myclients.php" class="btn btn-danger btn-sm"><i class="fa fa-backward"></i> Return</a>
 		</div><hr>
 		<?php $ClientInfo = mysqli_fetch_assoc($sql);?>
