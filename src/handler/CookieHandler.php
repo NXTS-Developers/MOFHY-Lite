@@ -5,7 +5,7 @@ if(isset($_COOKIE['LEFSESS'])){
 		$ClientInfo = mysqli_fetch_assoc($sql);
 	}
 	else{
-		setcookie('LEFSESS', "null" ,-1,'/');
+		setcookie('LEFSESS', null ,-1,'/');
 		$_SESSION['message'] = '<div class="alert alert-danger" role="alert">
 									  <button class="close" data-dismiss="alert" type="button" aria-label="Close">
 									    <span aria-hidden="true">&times;</span>
