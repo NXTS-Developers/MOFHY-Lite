@@ -8,7 +8,7 @@ if(isset($_POST['login'])){
 	$sql = mysqli_query($connect,"SELECT * FROM `hosting_clients` WHERE `hosting_client_email`='".$FormData['email']."'");
 	if(mysqli_num_rows($sql)>0){
 		$Data = mysqli_fetch_assoc($sql);
-		if($Data['hosting_client_password']==sha1($FormData['password'])){
+		if(trim($Data['hosting_client_password'])==sha1($FormData['password'])){
 			if(isset($_POST['remember'])){
 				setcookie('LEFSESS',base64_encode($Data['hosting_client_key']),time()+30*86400,'/');
 			}
