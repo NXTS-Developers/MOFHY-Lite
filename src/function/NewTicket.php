@@ -4,7 +4,7 @@ require __DIR__.'/../handler/CookieHandler.php';
 require_once __DIR__.'/../handler/AreaHandler.php';
 if(isset($_POST['submit'])){
 	$FormData = array(
-		'email' => $_POST['email'],
+		'email' => mysqli_real_escap_string($connect, $_POST['email']),
 		'subject' => $connect->real_escape_string(str_rot13($_POST['subject'])),
 		'content' => $connect->real_escape_string(str_rot13($_POST['editor'])),
 		'department' => $_POST['department'],
