@@ -3,8 +3,8 @@ include __DIR__.'/Connect.php';
 require __DIR__.'/../handler/SessionHandler.php';
 if(isset($_POST['submit'])){
 	$FormData = array(
-		'old_password' => $_POST['old_password'],
-		'new_password' => $_POST['new_password'],
+		'old_password' => mysqli_real_escape_string($connect, $_POST['old_password']),
+		'new_password' => mysql_real_escape_string($connect, $_POST['new_password']),
 		'hashed_password' => sha1($_POST['new_password']),
 		'user_key' => $AdminInfo['admin_key'],
 		'user_password' => $AdminInfo['admin_password'],
