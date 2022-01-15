@@ -1,7 +1,7 @@
 <div class="container-fluid">
 	<div class="card py-0">
 		<div class="d-flex justify-content-between align-items-center pt-15">
-			<h5 class="m-0">Viewing Account (<?php echo $_GET['account_id']?>)</h5>
+			<h5 class="m-0">Viewing Account (<?php echo htmlspecialchars($_GET['account_id']) ?>)</h5>
 			<a href="<?php echo $AreaInfo['area_url'];?>myaccounts.php" class="btn btn-sm btn-danger"><i class="fa fa-backward"></i> Return</a>
 		</div><hr>
 		<?php $AccountInfo = mysqli_fetch_assoc($sql);

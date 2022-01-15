@@ -1,7 +1,8 @@
 <div class="container-fluid">
 	<div class="card py-0">
 		<div class="d-flex justify-content-between align-items-center pt-15">
-			<h5 class="m-0">Viewing Ticket #<?php echo $_GET['ticket_id']?></h5>
+			<h5 class="m-0">Viewing Ticket #<?php echo htmlspecialchars($_GET['ticket_id'])
+			?></h5>
 			<a href="<?php echo $AreaInfo['area_url'];?>mytickets.php" class="btn btn-sm btn-danger"><i class="fa fa-backward"></i> Return</a>
 		</div><hr>
 		<?php $TicketInfo = mysqli_fetch_assoc($sql);?>
