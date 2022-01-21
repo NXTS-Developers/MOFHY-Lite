@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
 	$FormData = array(
     'fname' => $_POST['first'],
     'lname' => $_POST['last'],
-    'password' => sha1($_POST['password']),
+    'password' => hash('sha256', $_POST['password']),
     'email' => $_POST['email'],
     'key' => substr(str_shuffle('qwertyuioplkjhgfdsazxcvbnm012345789QWERTYUIOPLKJHGFDSAZXCVBNM'),0,8)
 	);
