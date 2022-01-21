@@ -12,7 +12,7 @@ if(isset($_POST['signup'])){
 		'postal' => 'NULL',
 		'address' => 'NULL',
 		'phone' => 'NULL',
-		'password' => sha1($_POST['password']),
+		'password' => hash('sha256', $_POST['password']),
 		'date' => date('d-m-Y'),
 		'key' => substr(str_shuffle('qwertyuioplkjhgfdsazxcvbnm012345789QWERTYUIOPLKJHGFDSAZXCVBNM'),0,8)
 	);
