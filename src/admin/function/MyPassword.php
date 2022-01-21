@@ -5,11 +5,11 @@ if(isset($_POST['submit'])){
 	$FormData = array(
 		'old_password' => mysqli_real_escape_string($connect, $_POST['old_password']),
 		'new_password' => mysql_real_escape_string($connect, $_POST['new_password']),
-		'hashed_password' => sha1($_POST['new_password']),
+		'hashed_password' => hash('sha256', $_POST['new_password']),
 		'user_key' => $AdminInfo['admin_key'],
 		'user_password' => $AdminInfo['admin_password'],
 	);
-	if(sha1($FormData['old_password'])==$FormData['user_password']){
+	if(hash('sha256', $FormData['old_password'])==$FormData['user_password']){
 		$sql = mysqli_query($connect,"UPDATE `hosting_admin` SET `admin_password`='".$FormData['hashed_password']."' WHERE `admin_key`='".$FormData['user_key']."'");
 		if($sql){
 			$_SESSION['message'] = '<div class="alert alert-success" role="alert">
