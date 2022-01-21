@@ -14,7 +14,7 @@ if(isset($_POST['signup'])){
 		'phone' => 'NULL',
 		'password' => sha1($_POST['password']),
 		'date' => date('d-m-Y'),
-		'key' => rand(000000,999999)
+		'key' => substr(str_shuffle('qwertyuioplkjhgfdsazxcvbnm012345789QWERTYUIOPLKJHGFDSAZXCVBNM'),0,8)
 	);
 	$sql = mysqli_query($connect,"SELECT * FROM `hosting_clients` WHERE `hosting_client_email`='".$FormData['email']."' OR `hosting_client_key`='".$FormData['key']."'");
 	if(mysqli_num_rows($sql)>0){
