@@ -8,7 +8,7 @@ if(isset($_POST['login'])){
 	$sql = mysqli_query($connect,"SELECT * FROM `hosting_admin` WHERE `admin_email`='".$FormData['email']."'");
 	if(mysqli_num_rows($sql)>0){
 		$Data = mysqli_fetch_assoc($sql);
-		if(trim($Data['admin_password'])==sha1($FormData['password'])){
+		if(trim($Data['admin_password'])==hash('sha256', $FormData['password'])){
 			if(isset($_POST['remember'])){
 				$_SESSION['LEASESS'] = base64_encode($Data['admin_key']);
 			}
