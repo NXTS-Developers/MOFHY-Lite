@@ -14,9 +14,10 @@ if(isset($_POST['submit'])){
     'lname' => $_POST['last'],
     'password' => sha1($_POST['password']),
     'email' => $_POST['email'],
+    'key' => substr(str_shuffle('qwertyuioplkjhgfdsazxcvbnm012345789QWERTYUIOPLKJHGFDSAZXCVBNM'),0,8)
 	);
 	$sql = mysqli_query($connect,"INSERT INTO `hosting_admin` (`admin_id`, `admin_fname`, `admin_lname`, `admin_email`, `admin_key`, `admin_password`) VALUES
-(1, '".$FormData['fname']."', '".$FormData['lname']."', '".$FormData['email']."', 999999, '".$FormData['password']."')");
+(1, '".$FormData['fname']."', '".$FormData['lname']."', '".$FormData['email']."','".$FormData['key']."', '".$FormData['password']."')");
 	if($sql){
 		$_SESSION['message'] = '<div class="alert alert-success" role="alert">
 									  <button class="close" data-dismiss="alert" type="button" aria-label="Close">
