@@ -13,6 +13,7 @@ if(isset($_SESSION['LEASESS'])){
 									  Login to <b>continue!</b>
 									</div>';
 		header('location: login.php');
+                exit;
 	}
 }
 else{
@@ -23,5 +24,6 @@ else{
 									  Login to <b>continue!</b>
 									</div>';
 	header('location: login.php');
+        exit;
 }
 ?>
