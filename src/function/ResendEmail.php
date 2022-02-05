@@ -2,7 +2,7 @@
 require __DIR__.'/Connect.php';
 require __DIR__.'/../handler/CookieHandler.php';
 include __DIR__.'/../handler/AreaHandler.php';
-if(isset($_GET['resend'])&&$_GET['resend']=='true'){
+if(isset($_GET['resend']) == 'true'){
 	$Token = str_replace('$2y$10$', '', password_hash($ClientInfo['hosting_client_key'], PASSWORD_DEFAULT));
 	$EmailTo = [['email' => $ClientInfo['hosting_client_email']]];
 	$Body = "
