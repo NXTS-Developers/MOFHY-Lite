@@ -4,8 +4,8 @@ require_once __DIR__.'/../handler/AreaHandler.php';
 if(isset($_POST['reset'])){
 	$FormData = array(
 		'token' => htmlentities(mysqli_real_escape_string($connect, $_POST['token'])),
-		'new_password' => $_POST['password'],
-		'hashed_password' => hash('sha256', $_POST['password']),
+		'new_password' => htmlentities(mysqli_real_escape_string($connect, $_POST['password'])),
+		'hashed_password' => hash('sha256', htmlentities(mysqli_real_escape_string($connect, $_POST['password']))),
 	);
 	$UserID = json_decode(base64_decode($_POST['token']));
 	$Email = $UserID[0]->email;
