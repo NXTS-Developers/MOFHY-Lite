@@ -10,10 +10,10 @@ if(isset($_POST['submit'])){
 	$DataBase['name']
 	);
 	$FormData = array(
-    'fname' => $_POST['first'],
-    'lname' => $_POST['last'],
-    'password' => hash('sha256', $_POST['password']),
-    'email' => $_POST['email'],
+    'fname' => htmlentities(mysqli_real_escape_string($connect, $_POST['first'])),
+    'lname' => htmlentities(mysqli_real_escape_string($connect, $_POST['last'])),
+    'password' => hash('sha256', htmlentities(mysqli_real_escape_string($connect, $_POST['password']))),
+    'email' => htmlentities(mysqli_real_escape_string($connect, $_POST['email'])),
     'key' => substr(str_shuffle('qwertyuioplkjhgfdsazxcvbnm012345789QWERTYUIOPLKJHGFDSAZXCVBNM'),0,8)
 	);
 	$sql = mysqli_query($connect,"INSERT INTO `hosting_admin` (`admin_id`, `admin_fname`, `admin_lname`, `admin_email`, `admin_key`, `admin_password`) VALUES
