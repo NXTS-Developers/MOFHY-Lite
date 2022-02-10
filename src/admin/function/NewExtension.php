@@ -5,7 +5,7 @@ if(isset($_POST['submit'])){
 	$FormData = array(
 		'domain' => mysqli_real_escape_string($connect, strtolower($_POST['domain'])),
 	);
-        if(substr($FormData['domain'],0,0) != '.'){
+        if(substr($FormData['domain'], 0, 1) != '.'){
                  $FormData['domain'] = '.'.$FormData['domain'];
         }
 	$sql = mysqli_query($connect,"SELECT * FROM `hosting_domain_extensions` WHERE `extension_value`='".$FormData['domain']."'");
