@@ -11,7 +11,7 @@ if(isset($_POST['submit'])){
 		'for' => $ClientInfo['hosting_client_key'],
 		'unique_id' => rand(000000,999999),
 		'date' => date('d-m-Y'),
-		'status' => 0,
+		'status' => 0
 	);
 	$sql = mysqli_query($connect,"SELECT * FROM `hosting_tickets` WHERE `ticket_unique_id`='".$FormData['unique_id']."'");
 	if(mysqli_num_rows($sql)>0){
