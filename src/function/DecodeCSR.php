@@ -5,7 +5,7 @@ require_once __DIR__.'/../handler/AreaHandler.php';
 require __DIR__.'/../handler/SSLHandler.php';
 if(isset($_POST['submit'])){
 	$FormData = array(
-	'csr' => $_POST['csr']
+	'csr' => trim(htmlentities($_POST['csr']))
 	);
     $apiClient = new GoGetSSLApi();
     $token = $apiClient->auth($SSLApi['api_username'],$SSLApi['api_password']);
