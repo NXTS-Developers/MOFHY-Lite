@@ -29,7 +29,8 @@
 				</div>
 				<div class="col-md-12">
 					<div class="mb-10 px-10">
-						<button name="submit" class="btn btn-sm btn-primary">Update Knowledgebase</button>
+						<button name="submit" class="btn btn-sm btn-primary">Update</button>
+						<a href="<?php echo $AreaInfo['area_url'];?>admin/viewknowledgebase.php?knowledgebase_id=<?php echo $Knowledgebase['knowledgebase_id'];?>" target="_blank" class="btn btn-sm btn-success">Preview</a>
 					</div>
 				</div>
 			</div>

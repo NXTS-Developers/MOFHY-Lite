@@ -1,48 +1,60 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-6 col-lg-3">
-				<a href="myclients.php" class="d-block nolink">
-				<div class="text-center rounded card m-20 bg-matrix-1 text-white">
-					<h1 class="mb-0"><i class="fa fa-users"></i></h1>
+			<div class="card text-center bg-matrix-1 m-20 p-0 border-0">
+				<div class="mx-20 my-15 d-flex justify-content-between align-items-center">
 					<?php 
-						$sql = mysqli_query($connect,"SELECT * FROM `hosting_clients` WHERE `hosting_client_status`!=0");
+						$cli =  mysqli_query($connect,"SELECT * FROM `hosting_clients`");
 					?>
-					<h5 class="mt-0"><?php echo mysqli_num_rows($sql);?> Clients</h5>
+					<h3 class="my-0 pt-0 text-white"><?php echo mysqli_num_rows($cli);?></h3>
+					<i class="fa fa-users fa-3x pt-10 text-white"></i>
 				</div>
-			</a>
+				<div class="py-5" style="background: rgba(0,0,0,0.05); border-radius: 0px 0px 10px 10px;">
+					<a href="myclients.php" class="text-white">View Client <i class="fa fa-forward"></i></a>
+				</div>
+			</div>
 		</div>
 		<div class="col-md-6 col-lg-3">
-				<a href="myaccounts.php" class="d-block nolink">
-				<div class="text-center rounded card m-20 bg-matrix-2 text-white">
-					<h1 class="mb-0"><i class="fa fa-shopping-cart"></i></h1>
+			<div class="card text-center bg-matrix-2 m-20 p-0 border-0">
+				<div class="mx-20 my-15 d-flex justify-content-between align-items-center">
 					<?php 
-						$sql = mysqli_query($connect,"SELECT * FROM `hosting_account` WHERE `account_status`=1");
+						$cli =  mysqli_query($connect,"SELECT * FROM `hosting_account` WHERE `account_status`=1");
 					?>
-					<h5 class="mt-0"><?php echo mysqli_num_rows($sql);?> Accounts</h5>
+					<h3 class="my-0 pt-0 text-white"><?php echo mysqli_num_rows($cli);?></h3>
+					<i class="fa fa-shopping-cart fa-3x pt-10 text-white"></i>
 				</div>
-			</a>
+				<div class="py-5" style="background: rgba(0,0,0,0.05); border-radius: 0px 0px 10px 10px;">
+					<a href="myaccounts.php" class="text-white">View Account <i class="fa fa-forward"></i></a>
+				</div>
+			</div>
 		</div>
 		<div class="col-md-6 col-lg-3">
-				<a href="myssl.php" class="d-block nolink">
-				<div class="text-center rounded card m-20 bg-matrix-3 text-white">
-					<h1 class="mb-0"><i class="fa fa-lock"></i></h1>
+			<div class="card text-center bg-matrix-3 m-20 p-0 border-0">
+				<div class="mx-20 my-15 d-flex justify-content-between align-items-center">
 					<?php 
-						$sql = mysqli_query($connect,"SELECT * FROM `hosting_ssl`");
+						$cli =  mysqli_query($connect,"SELECT * FROM `hosting_ssl`");
 					?>
-					<h5 class="mt-0"><?php echo mysqli_num_rows($sql);?> SSL</h5>
+					<h3 class="my-0 pt-0 text-white"><?php echo mysqli_num_rows($cli);?></h3>
+					<i class="fa fa-shield-alt fa-3x pt-10 text-white"></i>
 				</div>
-			</a>
+				<div class="py-5" style="background: rgba(0,0,0,0.05); border-radius: 0px 0px 10px 10px;">
+					<a href="myssl.php" class="text-white">View SSL <i class="fa fa-forward"></i></a>
+				</div>
+			</div>
 		</div>
 		<div class="col-md-6 col-lg-3">
-				<a href="mytickets.php" class="d-block nolink">
-				<div class="text-center rounded card m-20 bg-matrix-4 text-white">
-					<h1 class="mb-0"><i class="fa fa-bullhorn"></i></h1>
+			<div class="card text-center bg-matrix-4 m-20 p-0 border-0">
+				<div class="mx-20 my-15 d-flex justify-content-between align-items-center">
 					<?php 
-						$sql = mysqli_query($connect,"SELECT * FROM `hosting_tickets` WHERE `ticket_status`=0 OR `ticket_status`=2");
+						$cli =  mysqli_query($connect,"SELECT * FROM `hosting_tickets` WHERE `ticket_status`=0 OR `ticket_status`=2");
 					?>
-					<h5 class="mt-0"><?php echo mysqli_num_rows($sql);?> Tickets</h5>
+					<h3 class="my-0 pt-0 text-white"><?php echo mysqli_num_rows($cli);?></h3>
+					<i class="fa fa-bullhorn fa-3x pt-10 text-white"></i>
 				</div>
-			</a>
+				<div class="py-5" style="background: rgba(0,0,0,0.05); border-radius: 0px 0px 10px 10px;">
+					<a href="mytickets.php" class="text-white">View Ticket <i class="fa fa-forward"></i></a>
+				</div>
+			</div>
 		</div>
 		<div class="col-lg-6">
 			<div class="card m-20">

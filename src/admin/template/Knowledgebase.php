@@ -8,10 +8,10 @@
 		<div class="table-responsive">
 			<table class="table table-stripped">
 				<thead>
-					<th>ID</th>
-					<th>Subject</th>
-					<th>Date</th>
-					<th>Action</th>
+					<th width="5%">ID</th>
+					<th width="75%">Subject</th>
+					<th width="10%">Date</th>
+					<th width="10%">Action</th>
 				</thead>
 				<tbody>
 				<?php
@@ -24,7 +24,7 @@
 						<td>#<?php $Count = $Count ?? 1;echo $Count;$Count += 1;?></td>
 						<td><?php echo $Knowledgebase['knowledgebase_subject'];?></td>
 						<td><?php echo $Knowledgebase['knowledgebase_date'];?></td>
-						<td><a href="<?php echo $AreaInfo['area_url'];?>admin/viewknowledgebase.php?knowledgebase_id=<?php echo $Knowledgebase['knowledgebase_id'];?>" class="btn btn-sm btn-secondary btn-rounded"> Read</a><a href="<?php echo $AreaInfo['area_url'];?>admin/editknowledgebase.php?knowledgebase_id=<?php echo $Knowledgebase['knowledgebase_id'];?>" class="btn btn-sm btn-danger mx-5 btn-rounded"> Edit</a></td>
+						<td><a href="<?php echo $AreaInfo['area_url'];?>admin/editknowledgebase.php?knowledgebase_id=<?php echo $Knowledgebase['knowledgebase_id'];?>" class="btn btn-sm btn-secondary mx-5 btn-rounded"><i class="fa fa-edit"></i> Update</a></td>
 					</tr>
 					<?php
 							}
@@ -39,6 +39,6 @@
 				</tbody>
 			</table>
 		</div>
-		<p class="pb-10"><?php echo $Rows;?> knowledgebase found</p>
+		<p class="pb-10"><?php echo $Rows;?> Records Found</p>
 	</div>
 </div>

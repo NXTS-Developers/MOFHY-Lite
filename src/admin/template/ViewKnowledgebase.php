@@ -19,14 +19,12 @@
 						<span><?php echo $Knowledgebase['knowledgebase_date'];?></span>
 					</div>
 				</div>
-				<div class="col-md-12">
-					<hr>
-					<div class="mx-10 my-5">
-						<b>Content:</b><br>
-						<span><?php echo ucwords($Knowledgebase['knowledgebase_content']);?></span>
-					</div>
-				</div>
 			</div>
+		</div>
+	</div>
+	<div class="card py-0">
+		<div class="mx-10 py-15">
+			<span><?php echo ucwords($Knowledgebase['knowledgebase_content']);?></span>
 		</div>
 	</div>
 </div>

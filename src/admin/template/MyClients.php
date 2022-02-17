@@ -8,16 +8,16 @@
 		<div class="table-responsive">
 			<table class="table table-stripped">
 				<thead>
-					<th>ID</th>
-					<th>Client Name</th>
-					<th>Client Email</th>
-					<th>Registration Date</th>
-					<th>Client Status</th>
-					<th>Action</th>
+					<th width = '5%'>ID</th>
+					<th width = '10%'>Name</th>
+					<th width = '40%'>Email</th>
+					<th width = '10%'>Date</th>
+					<th width = '10%'>Status</th>
+					<th width = '10%'>Action</th>
 				</thead>
 				<tbody>
 				<?php
-					$sql = mysqli_query($connect,"SELECT * FROM `hosting_clients` WHERE `hosting_client_status`!=0");
+					$sql = mysqli_query($connect,"SELECT * FROM `hosting_clients`");
 							$Rows = mysqli_num_rows($sql);
 						if($Rows>0){
 							while($ClientInfo = mysqli_fetch_assoc($sql)){
@@ -29,14 +29,17 @@
 						<td><?php echo $ClientInfo['hosting_client_date'];?></td>
 						<td><?php 
 							if($ClientInfo['hosting_client_status']=='0'){
+								$btn = ['secondary', 'cog'];
 								echo '<span class="badge bg-secondary badge-pill">Inactive</span>';
 							} elseif($ClientInfo['hosting_client_status']=='1'){
+								$btn = ['success', 'globe'];
 								echo '<span class="badge bg-success badge-pill">Active</span>';
 							} elseif($ClientInfo['hosting_client_status']=='2'){
+								$btn = ['danger', 'lock'];
 								echo '<span class="badge bg-danger badge-pill">Suspended</span>';
 							}
 						?></td>
-						<td><a href="<?php echo $AreaInfo['area_url'];?>admin/viewclient.php?client_id=<?php echo $ClientInfo['hosting_client_key'];?>" class="btn btn-sm btn-secondary btn-rounded">Manage</a></td>
+						<td><a href="<?php echo $AreaInfo['area_url'];?>admin/viewclient.php?client_id=<?php echo $ClientInfo['hosting_client_key'];?>" class="btn btn-sm btn-<?php echo $btn[0]?> btn-rounded"><i class="fa fa-<?php echo $btn[1] ?>"></i> Manage</a></td>
 					</tr>
 					<?php
 							}
@@ -51,6 +54,6 @@
 				</tbody>
 			</table>
 		</div>
-		<p class="pb-10"><?php echo $Rows;?> clients found</p>
+		<p class="pb-10"><?php echo $Rows;?> Records Founds</p>
 	</div>
 </div>

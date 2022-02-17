@@ -1,6 +1,6 @@
 <div class="container-fluid">
-	<div class="card p-15">
-		<div class="d-flex justify-content-between align-items-center px-5">
+	<div class="card py-0">
+		<div class="d-flex justify-content-between align-items-center px-5 pt-15">
 			<h5 class="m-0">Extensions</h5>
 			<a href="<?php echo $AreaInfo['area_url'];?>admin/index.php" class="btn btn-danger btn-sm"><i class="fa fa-backward"></i> Return</a>
 		</div><hr>
@@ -20,24 +20,16 @@
 				</div>
 			</form>
 			<h6 class="mb-5 px-10">Registered Extensions</h6>
-			<div class="table-responsive mb-10 px-10">
-				<table class="table table-stripped">
-					<thead>
-						<th>Extension ID</th>
-						<th>Extension</th>
-						<th>Action</th>
-					</thead>
-					<tbody>
+			<div class="mb-10 px-10 pt-5 pb-10">
 						<?php 
-							$sql = mysqli_query($connect,"SELECT * FROM `hosting_domain_extensions` ORDER BY `extension_id` DESC");
+							$sql = mysqli_query($connect,"SELECT * FROM `hosting_domain_extensions` ORDER BY `extension_id` ASC");
 							if(mysqli_num_rows($sql)>0){
 								while($Extensions = mysqli_fetch_assoc($sql)){
 						?>
-								<tr>
-									<td><?php $Count = $Count ?? 1;echo $Count;$Count += 1;?></td>
-									<td><?php echo $Extensions['extension_value']?></td>
-									<td><a href="function/DeleteExtension.php?extension=<?php echo $Extensions['extension_value'];?>" class="btn btn-sm btn-secondary btn-rounded">DELETE</a></td>
-								</tr>
+								<div class="d-flex justify-content-between align-items-center mb-5">
+									<span><?php echo $Extensions['extension_value']?></span>
+									<span><a href="function/DeleteExtension.php?extension=<?php echo $Extensions['extension_value'];?>" class="btn btn-sm btn-secondary btn-rounded"><i class="fa fa-trash"></i></a></span>
+								</div>
 						<?php
 								}
 							}
@@ -49,8 +41,6 @@
 						<?php
 							}
 						?>
-					</tbody>
-				</table>
 			</div>
 		</div>
 	</div>

@@ -1,7 +1,7 @@
 <div class="container-fluid">
-	<div class="card py-20">
-		<div class="d-flex justify-content-between align-items-center ">
-			<p class="m-0"><b>Client Information</b></p>
+	<div class="card py-15">
+		<div class="d-flex justify-content-between align-items-center">
+			<h5 class="m-0">Client Information</h5>
 			<a href="<?php echo $AreaInfo['area_url'];?>admin/myclients.php" class="btn btn-danger btn-sm"><i class="fa fa-backward"></i> Return</a>
 		</div><hr>
 		<?php $ClientInfo = mysqli_fetch_assoc($sql);?>
@@ -28,6 +28,7 @@
 			<div class="col-md-6">
 				<h6 class="mb-0"><b>Country:</b> <?php 
 					$countries = array(
+						array("name"=>"Not Defined", "code"=>"NULL"),
 						array("name"=>"Andorra", "code"=>"AD"),
 						array("name"=>"United Arab Emirates", "code"=>"AE"),
 						array("name"=>"Afghanistan", "code"=>"AF"),
@@ -289,19 +290,32 @@
 				<h6 class="mb-0"><b>Postal Code:</b> <?php echo $ClientInfo['hosting_client_pcode'];?></h6>
 			</div>
 			<div class="col-md-6">
-				<h6 class="mb-0"><b>IP Address:</b> <?php echo UserInfo::get_ip();?></h6>
+				<h6 class="mb-0"><b>Hosting Accounts:</b> <?php 
+				$sql = mysqli_query($connect, "SELECT `account_id` FROM `hosting_account` WHERE `account_for` = '".$ClientInfo['hosting_client_key']."'");
+				echo mysqli_num_rows($sql);
+				?></h6>
 			</div>
 			<div class="col-md-6">
-				<h6 class="mb-0"><b>Device Type:</b> <?php echo UserInfo::get_device();?></h6>
+				<h6 class="mb-0"><b>SSL Certificates:</b> <?php 
+				$sql = mysqli_query($connect, "SELECT `ssl_id` FROM `hosting_ssl` WHERE `ssl_for` = '".$ClientInfo['hosting_client_key']."'");
+				echo mysqli_num_rows($sql);
+				?></h6>
 			</div>
 			<div class="col-md-6">
-				<h6 class="mb-0"><b>Device OS:</b> <?php echo UserInfo::get_os();?></h6>
+				<h6 class="mb-0"><b>Support Tickets:</b> <?php 
+				$sql = mysqli_query($connect, "SELECT `ticket_id` FROM `hosting_tickets` WHERE `ticket_for` = '".$ClientInfo['hosting_client_key']."'");
+				echo mysqli_num_rows($sql);
+				?></h6>
 			</div>
-			<div class="col-md-6">
-				<h6 class="mb-0"><b>Web Browser:</b> <?php echo UserInfo::get_browser();?></h6>
-			</div>
-			<div class="col-md-12">
+			<div class="col-md-12 py-5">
 				<a href="clogin.php?client_id=<?php echo $ClientInfo['hosting_client_key']?>" class="btn m5t btn-sm btn-primary">Login as <?php echo $ClientInfo['hosting_client_fname']?></a>
+				<?php 
+					if($ClientInfo['hosting_client_status']!=='1'){
+						echo '<a href="function/ActivateClient.php?client_id='.$ClientInfo['hosting_client_key'].'" class="btn m5t btn-sm btn-success text-white">Mark as Active</a>';
+					} else{
+						echo '<a href="function/SuspendClient.php?client_id='.$ClientInfo['hosting_client_key'].'" class="btn m5t btn-sm btn-secondary">Mark as Suspended</a>';
+					}
+				?>
 			</div>
 		</div>
 	</div>

@@ -53,7 +53,7 @@
 							} elseif($AccountInfo['account_status']=='1'){
 								echo '<span class="badge bg-success">Active</span>';
 							} elseif($AccountInfo['account_status']=='2'){
-								echo '<span class="badge bg-danger">Suspened</span>';
+								echo '<span class="badge bg-danger">Suspend</span>';
 							}?>
 					</span>
 				</div>

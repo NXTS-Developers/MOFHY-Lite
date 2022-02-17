@@ -1,6 +1,6 @@
 <div class="container-fluid">
-	<div class="card p-15">
-		<div class="d-flex justify-content-between align-items-center px-5">
+	<div class="card py-0">
+		<div class="d-flex justify-content-between align-items-center px-5 pt-15">
 			<h5 class="m-0">My Settings</h5>
 			<a href="<?php echo $AreaInfo['area_url'];?>admin/index.php" class="btn btn-danger btn-sm"><i class="fa fa-backward"></i> Return</a>
 		</div><hr>
@@ -107,7 +107,7 @@
 						</select>
 					</div>
 				</div>
-				<div class="col-md-12">
+				<div class="col-md-12 pb-15">
 					<div class="mb-10 px-10">
 						<button name="submit" class="btn btn-sm btn-primary">Update Profile</button>
 					</div>
