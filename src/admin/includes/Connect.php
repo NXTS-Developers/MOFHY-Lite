@@ -15,4 +15,8 @@ if(!isset($connect)){
 		echo 'Connection not established'; 
 	} 
 }
+
+function get_mofhy_version(){
+	return '1.0.6';
+}
 ?>
