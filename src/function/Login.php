@@ -9,11 +9,13 @@ if(isset($_POST['login'])){
 	if(mysqli_num_rows($sql)>0){
 		$Data = mysqli_fetch_assoc($sql);
 		if(trim($Data['hosting_client_password'])==hash('sha256', $FormData['password'])){
+			$key = rand(000000,999999);
+			$token = hash('sha256', json_encode([$FormData['email'], $Data['hosting_client_key'], $key]));
 			if(isset($_POST['remember'])){
-				setcookie('LEFSESS',base64_encode($Data['hosting_client_key']),time()+30*86400,'/');
+				setcookie('LEFSESS', base64_encode(gzcompress(json_encode(['email' => $FormData['email'],'token' => $token,'key' => $key]))), time()+30+86400, '/');
 			}
 			else{
-				setcookie('LEFSESS',base64_encode($Data['hosting_client_key']),time()+86400,'/');
+				setcookie('LEFSESS', base64_encode(gzcompress(json_encode(['email' => $Data['hosting_client_email'],'token' => $token,'key' => $key]))), time()+86400, '/');
 			}
 			$_SESSION['message'] = '<div class="alert alert-success" role="alert">
 									  <button class="close" data-dismiss="alert" type="button" aria-label="Close">
