@@ -4,10 +4,10 @@ require __DIR__.'/../handler/SessionHandler.php';
 if(isset($_POST['submit'])){
 	$FormData = array(
 		'old_password' => mysqli_real_escape_string($connect, $_POST['old_password']),
-		'new_password' => mysql_real_escape_string($connect, $_POST['new_password']),
+		'new_password' => mysqli_real_escape_string($connect, $_POST['new_password']),
 		'hashed_password' => hash('sha256', $_POST['new_password']),
-		'user_key' => $AdminInfo['admin_key'],
-		'user_password' => $AdminInfo['admin_password'],
+		'user_key' => mysqli_real_escape_string($connect, $AdminInfo['admin_key']),
+		'user_password' => mysqli_real_escape_string($connect, $AdminInfo['admin_password'])
 	);
 	if(hash('sha256', $FormData['old_password'])==$FormData['user_password']){
 		$sql = mysqli_query($connect,"UPDATE `hosting_admin` SET `admin_password`='".$FormData['hashed_password']."' WHERE `admin_key`='".$FormData['user_key']."'");

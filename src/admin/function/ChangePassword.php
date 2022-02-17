@@ -5,11 +5,11 @@ require __DIR__.'/../../modules/autoload.php';
 use \InfinityFree\MofhClient\Client;
 if(isset($_POST['submit'])){
 	$FormData = array(
-		'old_password' => $_POST['old_password'],
-		'new_password' => $_POST['new_password'],
-		'account_key' => $_POST['account_key'],
-		'account_username' => $_POST['account_username'],
-		'account_password' => $_POST['account_password'],
+		'old_password' => mysqli_real_escape_string($connect, $_POST['old_password']),
+		'new_password' => mysqli_real_escape_string($connect, $_POST['new_password']),
+		'account_key' => mysqli_real_escape_string($connect, $_POST['account_key']),
+		'account_username' => mysqli_real_escape_string($connect, $_POST['account_username']),
+		'account_password' => mysqli_real_escape_string($connect, $_POST['account_password'])
 	);
 	if($FormData['old_password']==$FormData['account_password']){
 		$client = Client::create();

@@ -9,7 +9,7 @@ if(isset($_POST['submit'])){
     'ip' => mysqli_real_escape_string($connect, $_POST['ip']),
     'ns1' => mysqli_real_escape_string($connect, $_POST['ns1']),
     'ns2' => mysqli_real_escape_string($connect, $_POST['ns2']),
-    'pkg' => mysqli_real_escape_string($connect, $_POST['pkg']),
+    'pkg' => mysqli_real_escape_string($connect, $_POST['pkg'])
 	);
 	$sql = mysqli_query($connect,"UPDATE `hosting_account_api` SET `api_username`='".$FormData['username']."',`api_password`='".$FormData['password']."',`api_cpanel_url`='".$FormData['url']."',`api_server_ip`='".$FormData['ip']."',`api_ns_1`='".$FormData['ns1']."',`api_ns_2`='".$FormData['ns2']."',`api_package`='".$FormData['pkg']."' WHERE `api_key`='MOFHAPI'");
 	if($sql){

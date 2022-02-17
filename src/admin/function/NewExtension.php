@@ -3,7 +3,7 @@ require __DIR__.'/Connect.php';
 require __DIR__.'/../handler/SessionHandler.php';
 if(isset($_POST['submit'])){
 	$FormData = array(
-		'domain' => mysqli_real_escape_string($connect, strtolower($_POST['domain'])),
+		'domain' => mysqli_real_escape_string($connect, strtolower($_POST['domain']))
 	);
         if(substr($FormData['domain'], 0, 1) != '.'){
                  $FormData['domain'] = '.'.$FormData['domain'];
