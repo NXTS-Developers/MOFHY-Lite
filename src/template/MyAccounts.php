@@ -1,9 +1,15 @@
 <?php include _DIR_."/../modules/autoload.php"; use \InfinityFree\MofhClient\Client;?>
+<?php 
+$sql = mysqli_query($connect,"SELECT * FROM `hosting_account` WHERE `account_for`='".$ClientInfo['hosting_client_key']."' ORDER BY `account_id` DESC");
+$Rows = mysqli_num_rows($sql); ?>
 <div class="container-fluid">
 	<div class="card py-0">
 		<div class="d-flex justify-content-between align-items-center pt-15">
 			<h5 class="m-0">My accounts</h5>
-			<a href="<?php echo $AreaInfo['area_url'];?>newaccount.php" class="btn text-white btn-success btn-sm">New Account</a>
+<?php if($Rows>2){
+			echo'';} else { ?>
+						<a href="<?php echo $AreaInfo['area_url'];?>newaccount.php" class="btn text-white btn-success btn-sm">New Account</a>
+<?php }?>
 		</div>
 		<hr>
 		<div class="table-responsive">
@@ -18,8 +24,6 @@
 				</thead>
 				<tbody>
 				<?php
-					$sql = mysqli_query($connect,"SELECT * FROM `hosting_account` WHERE `account_for`='".$ClientInfo['hosting_client_key']."' ORDER BY `account_id` DESC");
-							$Rows = mysqli_num_rows($sql);
 						if($Rows>0){
 							while($AccountInfo = mysqli_fetch_assoc($sql)){
 				?>
