@@ -8,7 +8,7 @@ if(isset($_COOKIE['LEFSESS'])){
 	if(mysqli_num_rows($sql)>0){
 		$ClientInfo = mysqli_fetch_assoc($sql);
 		$verify = hash('sha256', json_encode([$email, $ClientInfo['hosting_client_key'], $key]));
-		if(trim($token)! == trim($verify)){
+		if(trim($token) !== trim($verify)){
 			setcookie('LEFSESS', null ,-1,'/');
 			$_SESSION['message'] = '<div class="alert alert-danger" role="alert">
 										  <button class="close" data-dismiss="alert" type="button" aria-label="Close">
