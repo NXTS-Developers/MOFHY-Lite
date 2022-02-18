@@ -29,7 +29,12 @@
 		      <span class="sidebar-icon bg-secondary text-dark rounded-circle">
 		        <i class="fa fa-user-circle" aria-hidden="true"></i>
 		      </span>
-		      <?php echo $ClientInfo['hosting_client_fname']." ".$ClientInfo['hosting_client_lname'];?>
+		      <?php
+		      if($ClientInfo['hosting_client_status'] == 1)
+		      {
+		      	header("location: index.php");
+		      }
+		       echo $ClientInfo['hosting_client_fname']." ".$ClientInfo['hosting_client_lname'];?>
 		    </a>
 
         	<h5 class="sidebar-title">Main Menu</h5>

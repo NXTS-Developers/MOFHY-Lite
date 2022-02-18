@@ -52,15 +52,18 @@
 						<span><?php echo $TicketInfo['ticket_date'];?></span>
 					</div>
 				</div>
-				<div class="col-md-12">
-					<div class="mx-10 my-5">
-						<b>Content:</b>
-						<span><?php echo str_rot13($TicketInfo['ticket_content']);?></span>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
+		<div class="card py-10">
+			<div class="d-flex justify-content-between align-items-center px-5">
+				<b class="py-5"><?php echo $ClientInfo['hosting_client_fname'].' - '.$ClientInfo['hosting_client_lname'];?></b>
+				<span><?php echo $TicketInfo['ticket_date'];?></span>
+			</div><hr>
+			<div class="px-10 m-5">
+				<?php echo str_rot13($TicketInfo['ticket_content']);?>
+			</div>
+		</div>
 	<?php 
 		$sql = mysqli_query($connect,"SELECT * FROM `hosting_ticket_replies`WHERE `reply_for`='".$TicketInfo['ticket_unique_id']."'");
 		if(mysqli_num_rows($sql)>0){
@@ -72,7 +75,7 @@
 					$From = 'Staff Member';
 				}
 	?>
-		<div class="card p-5">
+		<div class="card py-10">
 			<div class="d-flex justify-content-between align-items-center px-5">
 				<b class="py-5"><?php echo $From;?></b>
 				<span><?php echo $ReplyInfo['reply_date'];?></span>
@@ -91,14 +94,14 @@
 			</div>
 		</div>
 	<?php } ?>
-	<div class="card p-5" id="reply">
+	<div class="card p-10" id="reply">
 		<?php if($TicketInfo['ticket_status']=='3'){ ?>
 			<div class="text-center">
 				<p>You can't reply to this ticket anymore open new ticket for any further questions.</p>
 			</div>
 		<?php } else { ?>
 				<form action="function/ReplyTicket.php" method="post" class="p-10">
-					<div class="form-group">
+					<div class="form-group mb-10">
 						<script src="modules/Editor/nicEdit.js"></script>
 						<script type="text/javascript">
 						    bkLib.onDomLoaded(function(){
@@ -106,11 +109,12 @@
 						    });
 						</script>
 						<label class="form-label required">Reply content</label>
-						<textarea class="form-control" name="editor" id="editor" style="height: 200px"></textarea>
+						<textarea class="form-control" name="editor" style="max-width: 100vw;" id="editor" style="height: 200px"></textarea>
 						<input type="hidden" name="ticket_id" value="<?php echo $TicketInfo['ticket_unique_id'];?>">
 					</div>
 					<div class="form-group my-0">
 						<button class="btn btn-sm btn-primary" name="submit">Add Reply</button>
+						<a href="function/CloseTicket.php?ticket_id=<?php echo $_GET['ticket_id']?>" class="btn btn-danger btn-sm">Close Ticket</a>
 					</div>
 				</form>
 		<?php } ?>

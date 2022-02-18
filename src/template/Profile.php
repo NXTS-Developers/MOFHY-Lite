@@ -1,7 +1,7 @@
 <div class="container-fluid">
-	<div class="card py-20">
-		<div class="d-flex justify-content-between align-items-center ">
-			<p class="m-0"><b>My Profile</b></p>
+	<div class="card py-15">
+		<div class="d-flex justify-content-between align-items-center px-5">
+			<h5 class="m-0">My Profile</h5>
 			<a href="<?php echo $AreaInfo['area_url'];?>index.php" class="btn btn-danger btn-sm"><i class="fa fa-backward"></i> Return</a>
 		</div><hr>
 		<div class="row">
@@ -27,6 +27,7 @@
 			<div class="col-md-6">
 				<h6 class="mb-0"><b>Country:</b> <?php 
 					$countries = array(
+						array("name"=>"Not Defined", "code"=>"NULL"),
 						array("name"=>"Andorra", "code"=>"AD"),
 						array("name"=>"United Arab Emirates", "code"=>"AE"),
 						array("name"=>"Afghanistan", "code"=>"AF"),
@@ -299,7 +300,7 @@
 			<div class="col-md-6">
 				<h6 class="mb-0"><b>Web Browser:</b> <?php echo UserInfo::get_browser();?></h6>
 			</div>
-			<div class="col-md-12">
+			<div class="col-md-12 pb-5">
 				<a href="mysettings.php" class="btn m5t btn-sm btn-primary">Update Profile</a>
 				<a href="https://en.gravatar.com/" target="_blank" class="btn m5t btn-sm btn-secondary">Update Image</a>
 			</div>

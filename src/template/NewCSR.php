@@ -1,6 +1,6 @@
 <div class="container-fluid">
 	<div class="card py-0">
-		<div class="d-flex justify-content-between align-items-center pt-15">
+		<div class="d-flex justify-content-between align-items-center pt-15 px-5">
 			<h5 class="m-0">New CSR</h5>
 			<a href="<?php echo $AreaInfo['area_url'];?>mytools.php" class="btn btn-sm btn-danger"><i class="fa fa-backward"></i> Return</a>
 		</div>
@@ -34,7 +34,7 @@
 				<div class="col-md-6">
 					<div class="mb-10 px-10">
 						<label class="form-label required">State Name</label>
-						<input type="text" id="state" class="form-control" required>
+						<input type="text" id="state" class="form-control disabled" value="<?php echo $ClientInfo['hosting_client_state'];?>" required readonly>
 					</div>
 				</div>
 				<div class="col-md-6">

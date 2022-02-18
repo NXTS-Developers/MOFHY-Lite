@@ -5,19 +5,20 @@
 			<a href="<?php echo $AreaInfo['area_url'];?>newticket.php" class="btn text-white btn-success btn-sm">New Ticket</a>
 		</div>
 		<hr>
-		<div class="table-responsive pb-20">
+		<div class="table-responsive">
 			<table class="table table-stripped">
 				<thead>
-					<th>ID</th>
-					<th>Subject</th>
-					<th>Department</th>
-					<th>Status</th>
-					<th>Action</th>
+					<th width="5%">ID</th>
+					<th width="80%">Subject</th>
+					<th width="5%">Department</th>
+					<th width="5%">Status</th>
+					<th width="5%">Action</th>
 				</thead>
 				<tbody>
 				<?php
 					$sql = mysqli_query($connect,"SELECT * FROM `hosting_tickets` WHERE `ticket_for`='".$ClientInfo['hosting_client_key']."' ORDER BY `ticket_id` DESC");
-						if(mysqli_num_rows($sql)>0){
+					$Rows = mysqli_num_rows($sql);
+						if($Rows > 0){
 							while($TicketInfo = mysqli_fetch_assoc($sql)){
 				?>
 					<tr>
@@ -36,16 +37,20 @@
 						?></td>
 						<td><?php 
 							if($TicketInfo['ticket_status']=='0'){
-								echo '<span class="badge bg-success badge-pill">Open</span>';
+								$btn = ['secondary','clock'];
+								echo '<span class="badge bg-secondary badge-pill">Open</span>';
 							} elseif($TicketInfo['ticket_status']=='1'){
+								$btn = ['success','comment'];
 								echo '<span class="badge bg-success badge-pill">Support Reply</span>';
 							} elseif($TicketInfo['ticket_status']=='2'){
-								echo '<span class="badge bg-success badge-pill">Customer Reply</span>';
+								$btn = ['primary','comment'];
+								echo '<span class="badge bg-primary badge-pill">Customer Reply</span>';
 							} elseif($TicketInfo['ticket_status']=='3'){
+								$btn = ['danger','lock'];
 								echo '<span class="badge bg-danger badge-pill">Closed</span>';
 							}
 						?></td>
-						<td><a href="<?php echo $AreaInfo['area_url'];?>viewticket.php?ticket_id=<?php echo $TicketInfo['ticket_unique_id'];?>#reply" class="btn btn-sm btn-secondary btn-rounded">Manage</a></td>
+						<td><a href="<?php echo $AreaInfo['area_url'];?>viewticket.php?ticket_id=<?php echo $TicketInfo['ticket_unique_id'];?>#reply" class="btn btn-sm btn-<?php echo $btn[0] ?> btn-rounded"><i class="fa fa-<?php echo $btn[1] ?>"></i> Manage</a></td>
 					</tr>
 					<?php
 							}
@@ -60,5 +65,6 @@
 				</tbody>
 			</table>
 		</div>
+		<p class="pb-10"><?php echo $Rows;?> Support Tickets</p>
 	</div>
 </div>

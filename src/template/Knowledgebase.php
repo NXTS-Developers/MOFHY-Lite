@@ -1,6 +1,6 @@
 <div class="container-fluid">
 	<div class="card py-0">
-		<div class="d-flex justify-content-between align-items-center pt-15">
+		<div class="d-flex justify-content-between align-items-center pt-15 mx-5">
 			<h5 class="m-0">Knowledgebase</h5>
 			<a href="<?php echo $AreaInfo['area_url'];?>index.php" class="btn text-white btn-danger btn-sm"><i class="fa fa-backward"></i> Return</a>
 		</div>
@@ -8,10 +8,10 @@
 		<div class="table-responsive">
 			<table class="table table-stripped">
 				<thead>
-					<th>ID</th>
-					<th>Subject</th>
-					<th>Date</th>
-					<th>Action</th>
+					<th width="5%">ID</th>
+					<th width="85%">Subject</th>
+					<th width="5%">Date</th>
+					<th width="5%">Action</th>
 				</thead>
 				<tbody>
 				<?php
@@ -24,7 +24,7 @@
 						<td>#<?php $Count = $Count ?? 1;echo $Count;$Count += 1;?></td>
 						<td><?php echo $Knowledgebase['knowledgebase_subject'];?></td>
 						<td><?php echo $Knowledgebase['knowledgebase_date'];?></td>
-						<td><a href="<?php echo $AreaInfo['area_url'];?>viewknowledgebase.php?knowledgebase_id=<?php echo $Knowledgebase['knowledgebase_id'];?>" class="btn btn-sm btn-secondary btn-rounded"> Read</a></td>
+						<td><a href="<?php echo $AreaInfo['area_url'];?>viewknowledgebase.php?knowledgebase_id=<?php echo $Knowledgebase['knowledgebase_id'];?>" class="btn btn-sm btn-secondary btn-rounded"><i class="fa fa-book"></i> Read</a></td>
 					</tr>
 					<?php
 							}

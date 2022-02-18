@@ -1,5 +1,5 @@
 <div class="container-fluid">
-	<div class="card p-15">
+	<div class="card py-15">
 		<div class="d-flex justify-content-between align-items-center px-5">
 			<h5 class="m-0">My Settings</h5>
 			<a href="<?php echo $AreaInfo['area_url'];?>index.php" class="btn btn-danger btn-sm"><i class="fa fa-backward"></i> Return</a>
@@ -48,6 +48,7 @@
 						<select class="form-control" id="area-of-specialization" name="country" required="required">
 					      <?php 
 							$Country = array(
+						array("name"=>"Not Defined", "code"=>"NULL"),
 						array("name"=>"Andorra", "code"=>"AD"),
 						array("name"=>"United Arab Emirates", "code"=>"AE"),
 						array("name"=>"Afghanistan", "code"=>"AF"),
@@ -308,6 +309,12 @@
 							}
 							?>
 						</select>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="mb-10 px-10">
+						<label class="form-label required">State Name</label>
+						<input type="text" name="state" value="<?php echo $ClientInfo['hosting_client_state'];?>" class="form-control" required>
 					</div>
 				</div>
 				<div class="col-md-6">
