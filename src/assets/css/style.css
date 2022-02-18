@@ -2,8 +2,21 @@
 	height: auto;
 }
 
+.navbar-brand-image{
+  height: 3rem !important;
+}
+
 .m5x{
 	margin-right: 6px;
+}
+
+.m5x6{
+  margin-right: 6px;
+}
+
+.g-recaptcha{
+  width: 100%;
+  overflow: hidden;
 }
 
 .m5t{
@@ -11,51 +24,56 @@
 }
 
 .bg-matrix-1{
-	background-image: linear-gradient(-45deg, pink, purple) !important;
+	  background-image: linear-gradient(-45deg, rgb(213 79 246), rgb(228 0 239)) !important;
     color:#fff;
     border-color:transparent;
 }
 
 .bg-matrix-2{
-	background-image: linear-gradient(-45deg, peachpuff, orange) !important;
+	 background-image: linear-gradient(-45deg, rgb(255 234 0), rgb(255 208 0)) !important;
     color:#fff;
     border-color:transparent;
 }
 
 .bg-matrix-3{
-	background-image: linear-gradient(-45deg, skyblue, steelblue) !important;
+	  background-image: linear-gradient(-45deg, rgb(0,255,255), rgb(96,217,235)) !important;
     color:#fff;
     border-color:transparent;
 }
 
 .bg-matrix-4{
-	background-image: linear-gradient(-45deg, cyan, green) !important;
+	  background-image: linear-gradient(-45deg, rgb(89 243 156), rgb(96 255 0)) !important;
     color:#fff;
     border-color:transparent;
 }
 
 .tool-1{
-  background-image: linear-gradient(-45deg, cyan, skyblue) !important;
+    background-image: linear-gradient(-45deg, cyan, skyblue) !important;
     color:#fff;
     border-color:transparent;
 }
 
 .tool-2{
-  background-image: linear-gradient(-45deg, red, pink) !important;
+    background-image: linear-gradient(-45deg, red, pink) !important;
     color:#fff;
     border-color:transparent;
 }
 
 .tool-3{
-  background-image: linear-gradient(-45deg, silver, grey) !important;
+    background-image: linear-gradient(-45deg, silver, grey) !important;
     color:#fff;
     border-color:transparent;
 }
 
 .tool-4{
-  background-image: linear-gradient(-45deg, maroon, brown) !important;
+    background-image: linear-gradient(-45deg, maroon, brown) !important;
     color:#fff;
     border-color:transparent;
+}
+
+.badge, .badge-pill, .btn-rounded{
+  border-radius: 4px !important;
+  border: none;
 }
 
 a:hover{
@@ -78,6 +96,10 @@ a:hover{
 	font-weight: 600 !important;
 }
 
+.btn-primary,.bg-primary,.btn-success,.bg-success,.badge-succes,.bg-danger,.badge-danger{
+  color: #fff !important;
+}
+
 /* nav tabs */
 
 .tabs {
@@ -95,7 +117,7 @@ a:hover{
 .tab-item:hover {
   border-color: rgba(0, 0, 0, 0.02);
 }
-
+ 
 .btn.tab-item.active {
   border-color: #199de9;
   box-shadow: none;
@@ -132,6 +154,14 @@ a:hover{
   }
 }
 
+.card{
+  border-radius: 10px !important;
+  overflow-x: auto;
+}
+
+pre{
+  overflow-x: auto;
+}
 
 @media only screen and (min-width: 992px){
 	.hidden-on-up{
