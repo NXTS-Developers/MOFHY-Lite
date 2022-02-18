@@ -11,12 +11,6 @@ $sql = mysqli_query($connect,'CREATE TABLE IF NOT EXISTS `hosting_account` (
   `account_for` VARCHAR(8) NOT NULL
 )');
 
-$sql = mysqli_query($connect,'CREATE TABLE IF NOT EXISTS `hosting_builder_api` (
-  `builder_id` VARCHAR(7) NOT NULL,
-  `buider_username` VARCHAR(100) NOT NULL,
-  `builder_password` VARCHAR(100) NOT NULL
-)');
-
 $sql = mysqli_query($connect,'CREATE TABLE IF NOT EXISTS `hosting_account_api` (
   `api_key` VARCHAR(7) NOT NULL,
   `api_username` VARCHAR(256) NOT NULL,
@@ -36,6 +30,12 @@ $sql = mysqli_query($connect,'CREATE TABLE IF NOT EXISTS `hosting_area` (
   `area_status` INT(2) NOT NULL
 )');
 
+$sql = mysqli_query($connect,'CREATE TABLE IF NOT EXISTS `hosting_builder_api` (
+  `builder_id` VARCHAR(7) NOT NULL,
+  `builder_username` VARCHAR(100) NOT NULL,
+  `builder_password` VARCHAR(100) NOT NULL
+)');
+
 $sql = mysqli_query($connect,'CREATE TABLE IF NOT EXISTS `hosting_clients` (
   `hosting_client_id` INT(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
   `hosting_client_fname` VARCHAR(30) NOT NULL,
@@ -47,6 +47,7 @@ $sql = mysqli_query($connect,'CREATE TABLE IF NOT EXISTS `hosting_clients` (
   `hosting_client_city` VARCHAR(30) NOT NULL,
   `hosting_client_pcode` VARCHAR(20) NOT NULL,
   `hosting_client_key` VARCHAR(8) NOT NULL,
+  `hosting_client_state` VARCHAR(30) NOT NULL,
   `hosting_client_date` VARCHAR(30) NOT NULL,
   `hosting_client_status` INT(1) NOT NULL,
   `hosting_client_company` VARCHAR(50) NOT NULL,
@@ -110,7 +111,6 @@ $sql = mysqli_query($connect,'CREATE TABLE IF NOT EXISTS `hosting_admin` (
 
 $sql = mysqli_query($connect,"INSERT INTO `hosting_account_api`(`api_key`, `api_username`, `api_password`, `api_cpanel_url`, `api_server_ip`, `api_ns_1`, `api_ns_2`, `api_package`) VALUES ('MOFHAPI','MOFH API Username','MOFH API Password','cpanel.example.com','185.27.134.46','ns1.byet.org','ns2.byet.org','freehosting')");
 
-$sql = mysqli_query($connect,"INSERT INTO `hosting_builde_api`(`builder_id`, `builder_username`, `builder_password`) VALUES ('SITEPRO','apikey0','Your API Password')");
 
 $sql = mysqli_query($connect,"INSERT INTO `hosting_smtp`(`smtp_key`, `smtp_host`, `smtp_username`, `smtp_password`, `smtp_port`, `smtp_from`) VALUES ('SMTP','smtp.gmail.com','example@gmail.com','example123','587','example@gmail.com')");
 
@@ -122,6 +122,8 @@ $sql = mysqli_query($connect,'CREATE TABLE IF NOT EXISTS `hosting_knowledgebase`
 )');
 
 $sql = mysqli_query($connect,"INSERT INTO `hosting_ssl_api`(`api_key`, `api_username`, `api_password`) VALUES ('FREESSL','example@gmail.com','SSL API Password')");
+
+$sql = mysqli_query($connect,"INSERT INTO `hosting_builder_api`(`builder_id`, `builder_username`, `builder_password`) VALUES ('SITEPRO','apikey0','API Password')");
 
 $sql = mysqli_query($connect,"INSERT INTO `hosting_domain_extensions`(`extension_value`) VALUES ('.example.com')");
 ?>
