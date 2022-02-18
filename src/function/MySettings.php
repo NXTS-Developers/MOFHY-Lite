@@ -11,9 +11,10 @@ if(isset($_POST['submit'])){
     'country' => htmlentities(mysqli_real_escape_string($connect,$_POST['country'])),
     'city' => htmlentities(mysqli_real_escape_string($connect,$_POST['city'])),
     'postal' => htmlentities(mysqli_real_escape_string($connect,$_POST['postal'])),
+    'state' => htmlentities(mysqli_real_escape_string($connect,$_POST['state'])),
     'key' => $ClientInfo['hosting_client_key']
 	);
-	$sql = mysqli_query($connect,"UPDATE `hosting_clients` SET `hosting_client_fname`='".$FormData['fname']."',`hosting_client_lname`='".$FormData['lname']."',`hosting_client_phone`='".$FormData['phone']."',`hosting_client_address`='".$FormData['address']."',`hosting_client_country`='".$FormData['country']."',`hosting_client_city`='".$FormData['city']."',`hosting_client_pcode`='".$FormData['postal']."',`hosting_client_company`='".$FormData['company']."' WHERE `hosting_client_key`='".$FormData['key']."'");
+	$sql = mysqli_query($connect,"UPDATE `hosting_clients` SET `hosting_client_fname`='".$FormData['fname']."',`hosting_client_lname`='".$FormData['lname']."',`hosting_client_phone`='".$FormData['phone']."',`hosting_client_address`='".$FormData['address']."',`hosting_client_country`='".$FormData['country']."',`hosting_client_city`='".$FormData['city']."',`hosting_client_pcode`='".$FormData['postal']."',`hosting_client_state`='".$FormData['state']."',`hosting_client_company`='".$FormData['company']."' WHERE `hosting_client_key`='".$FormData['key']."'");
 	if($sql){
 		$_SESSION['message'] = '<div class="alert alert-success" role="alert">
 									  <button class="close" data-dismiss="alert" type="button" aria-label="Close">

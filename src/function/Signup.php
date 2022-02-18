@@ -12,6 +12,7 @@ if(isset($_POST['signup'])){
 		'postal' => 'NULL',
 		'address' => 'NULL',
 		'phone' => 'NULL',
+		'state' => 'NULL',
 		'password' => hash('sha256', $_POST['password']),
 		'date' => date('d-m-Y'),
 		'key' => substr(str_shuffle('qwertyuioplkjhgfdsazxcvbnm012345789QWERTYUIOPLKJHGFDSAZXCVBNM'),0,8)
@@ -28,7 +29,7 @@ if(isset($_POST['signup'])){
 		exit;
 	}
 	else{
-		$sql = mysqli_query($connect,"INSERT INTO `hosting_clients`(`hosting_client_fname`, `hosting_client_lname`, `hosting_client_email`, `hosting_client_phone`, `hosting_client_address`, `hosting_client_country`, `hosting_client_city`, `hosting_client_pcode`, `hosting_client_key`, `hosting_client_date`, `hosting_client_status`, `hosting_client_company`, `hosting_client_password`) VALUES ('".$FormData['fname']."','".$FormData['lname']."','".$FormData['email']."','".$FormData['phone']."','".$FormData['address']."','".$FormData['country']."','".$FormData['city']."','".$FormData['postal']."','".$FormData['key']."','".$FormData['date']."','0','".$FormData['company']."','".$FormData['password']."')");
+		$sql = mysqli_query($connect,"INSERT INTO `hosting_clients`(`hosting_client_fname`, `hosting_client_lname`, `hosting_client_email`, `hosting_client_phone`, `hosting_client_address`, `hosting_client_country`, `hosting_client_city`, `hosting_client_pcode`, `hosting_client_key`, `hosting_client_date`, `hosting_client_status`, `hosting_client_company`, `hosting_client_state`, `hosting_client_password`) VALUES ('".$FormData['fname']."','".$FormData['lname']."','".$FormData['email']."','".$FormData['phone']."','".$FormData['address']."','".$FormData['country']."','".$FormData['city']."','".$FormData['postal']."','".$FormData['key']."','".$FormData['date']."','0','".$FormData['company']."','".$FormData['state']."','".$FormData['password']."')");
 			$Token = str_replace('$2y$10$', '', password_hash($FormData['key'], PASSWORD_DEFAULT));
 			$EmailTo = [['email' => $FormData['email']]];
 			$Body = "
