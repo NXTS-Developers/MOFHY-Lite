@@ -87,20 +87,20 @@
 			}
 		} else { 
 	?>
-		<div class="card py-10">
+		<div class="card py-5">
 			<div class="text-center">
 				<p>No replies to this ticket yet</p>
 			</div>
 		</div>
 	<?php } ?>
-	<div class="card py-10" id='reply'>
+	<div class="card p-10" id='reply'>
 		<?php if($TicketInfo['ticket_status']=='3'){ ?>
 			<div class="text-center">
 				<p>You can't reply to this ticket anymore open new ticket for any further questions.</p>
 			</div>
 		<?php } else { ?>
 				<form action="function/ReplyTicket.php" method="post" class="p-10">
-					<div class="form-group">
+					<div class="form-group mb-10">
 						<script src="../modules/Editor/nicEdit.js"></script>
 						<script type="text/javascript">
 						    bkLib.onDomLoaded(function(){
@@ -108,7 +108,7 @@
 						    });
 						</script>
 						<label class="form-label required">Reply content</label>
-						<textarea class="form-control" name="editor" id="editor" style="height: 200px"></textarea>
+						<textarea class="form-control" name="editor" id="editor" style="max-width: 100vw;" style="height: 200px"></textarea>
 						<input type="hidden" name="ticket_id" value="<?php echo $TicketInfo['ticket_unique_id'];?>">
 						<input type="hidden" name="ticket_email" value="<?php echo $TicketInfo['ticket_email'];?>">
 					</div>
