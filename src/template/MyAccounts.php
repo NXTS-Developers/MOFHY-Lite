@@ -18,7 +18,9 @@
 				<tbody>
 				<?php
 					$sql = mysqli_query($connect,"SELECT * FROM `hosting_account` WHERE `account_for`='".$ClientInfo['hosting_client_key']."' ORDER BY `account_id` DESC");
-							$Rows = mysqli_num_rows($sql);
+					$Rows = mysqli_num_rows($sql);
+					$query = mysqli_query($connect,"SELECT * FROM `hosting_account` WHERE `account_for`='".$ClientInfo['hosting_client_key']."' AND `account_status`='1' ORDER BY `account_id` DESC");
+					$Active = mysqli_num_rows($query);
 						if($Rows>0){
 							while($AccountInfo = mysqli_fetch_assoc($sql)){
 				?>
@@ -54,9 +56,9 @@
 				</tbody>
 			</table>
 		</div>
-		<?php if($Rows>2){
+		<?php if($Active>2){
 			echo('<div class="alert alert-secondary"><i class="fa fa-info-circle mr-5"></i>You are about to reach your account limit please upgrade to premium in order to get more hosting space and resources.</div>');
 		};?>
-		<p class="pb-10"><?php echo $Rows;?>/3 Free Accounts</p>
+		<p class="pb-10"><?php echo $Active;?>/3 Active Accounts</p>
 	</div>
 </div>
