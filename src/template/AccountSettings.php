@@ -1,10 +1,10 @@
+<?php $AccountInfo = mysqli_fetch_assoc($sql); if($AccountInfo['account_status'] !== '1'){header('Location: viewaccount.php?account_id='.$_GET['account_id'].'');}?>
 <div class="container-fluid">
 	<div class="card py-0">
 		<div class="d-flex justify-content-between align-items-center pt-15 mx-5">
 			<h5 class="m-0">Account Settings</h5>
 			<a href="<?php echo $AreaInfo['area_url'];?>viewaccount.php?account_id=<?php echo $_GET['account_id'];?>" class="btn btn-danger btn-sm"><i class="fa fa-backward"></i> Return</a>
 		</div><hr>
-		<?php $AccountInfo = mysqli_fetch_assoc($sql);?>
 		<div class="mb-15">
 			<div class="row">
 				<div class="col-md-6">
