@@ -1,5 +1,5 @@
 ## MOFHY Lite
-MOFHY Lite is a priceless MyOwnFreeHost Client Area for account management, ticket support system and a free ssl service. It has easy to use features much like the WHMCS Digit UI interface. 
+MOFHY Lite is a priceless MyOwnFreeHost Client Area for account management, ticket support system and a free ssl service. It has easy to use features much like the WHMCS Digit UI interface. Visit the [offical website](https://getmofhy.eu.org)!
 
 ![AppVeyor](https://img.shields.io/badge/Licence-MIT-lightgrey)
 ![AppVeyor](https://img.shields.io/badge/Version-v1.0.5-lightgrey)
@@ -86,7 +86,6 @@ Here are some widely used SMTP services. They have a free plan with some limitat
 - [ServersSMTP](https://serversmtp.com/get-free-emails/)
 
 ## Extensions
-- [MOFHY PRO](https://getmofhy.eu.org)
 - [MOFHY PLUS](https://mofhyplus.rf.gd)
 
 ## Contributer
