@@ -45,8 +45,6 @@
 						<label class="form-label required">Old Password</label>
 						<input type="password" name="old_password" placeholder="Old password here..." class="form-control">
 						<input type="hidden" name="account_username" value="<?php echo $AccountInfo['account_username'];?>">
-						<input type="hidden" name="account_password" value="<?php echo $AccountInfo['account_password'];?>">
-						<input type="hidden" name="account_key" value="<?php echo $AccountInfo['account_key'];?>">
 					</div>
 				</div>
 				<div class="col-md-12">
