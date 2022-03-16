@@ -18,5 +18,6 @@ if(file_exists('../installation/install.php')){
     <link href="../assets/css/halfmoon.min.css" rel="stylesheet" />
     <link href="../assets/css/all.min.css" rel="stylesheet" />
     <link href="../assets/css/style.css" rel="stylesheet" />
+    <meta name="robots" content="noindex,nofollow">
   </head>
     <body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-set-preferred-theme-onload="true">
