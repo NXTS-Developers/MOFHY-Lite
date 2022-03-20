@@ -77,7 +77,7 @@ class Client
         return [
             'apiUsername' => API_USERNAME,
             'apiPassword' => API_PASSWORD,
-            'apiUrl' => 'https://panel.myownfreehost.net:2087/xml-api/',
+            'apiUrl' => 'https://panel.myownfreehost.net/xml-api/',
             'plan' => API_PLAN,
         ];
     }
