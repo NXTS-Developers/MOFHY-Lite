@@ -8,9 +8,9 @@ if(isset($_POST['submit'])){
 	$FormData = array(
 		'username' => substr(str_shuffle('qwertyuioplkjhgfdsazxcvbnm012345789QWERTYUIOPLKJHGFDSAZXCVBNM'),0,8),
 		'password' => substr(str_shuffle('qwertyuioplkjhgfdsazxcvbnm012345789QWERTYUIOPLKJHGFDSAZXCVBNM'),0,16),
-		'domain' => $_POST['domain'],
+		'domain' => mysqli_real_escape_string($connect, $_POST['domain']),
 		'email' => $ClientInfo['hosting_client_email'],
-		'plan' => $_POST['package']
+		'plan' => mysqli_real_escape_string($connect, $_POST['package']) 
 	);
 	if(empty($FormData['domain'])){
 		$_SESSION['message'] = '<div class="alert alert-danger" role="alert">
