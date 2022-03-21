@@ -3,7 +3,7 @@ include __DIR__.'/Connect.php';
 require __DIR__.'/../handler/CookieHandler.php';
 require __DIR__.'/../modules/autoload.php';
 use \InfinityFree\MofhClient\Client;
-$sql = mysqli_query($connect,"SELECT * FROM `hosting_account` WHERE `account_username`='".$_POST['account_username']."'");
+$sql = mysqli_query($connect,"SELECT * FROM `hosting_account` WHERE `account_username`='".mysqli_real_escape_string($connect, $_POST['account_username'])."'");
 $AccountInfo = mysqli_fetch_assoc($sql);
 
 if(isset($_POST['submit'])){
@@ -12,8 +12,8 @@ if(isset($_POST['submit'])){
 	}
 
 	$FormData = array(
-		'old_password' => $_POST['old_password'],
-		'new_password' => $_POST['new_password'],
+		'old_password' => mysqli_real_escape_string($connect, $_POST['old_password']),
+		'new_password' => mysqli_real_escape_string($connect, $_POST['new_password']),
 		'account_key' => $AccountInfo['account_key'],
 		'account_username' => $AccountInfo['account_username'],
 		'account_password' => $AccountInfo['account_password'],
