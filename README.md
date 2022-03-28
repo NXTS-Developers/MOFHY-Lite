@@ -8,6 +8,7 @@ MOFHY Lite is a priceless MyOwnFreeHost Client Area for account management, tick
 ![AppVeyor](https://img.shields.io/badge/Dependencies-mysql-lightgrey)
 ![AppVeyor](https://img.shields.io/badge/Interface-Digit-lightgrey)
 ![AppVeyor](https://img.shields.io/badge/Dependencies-Active-lightgrey) 
+![AppVeyor](https://img.shields.io/badge/Development-Discontinued-lightred)
  ![GitHub all releases](https://img.shields.io/github/downloads/NXTS-Developers/MOFHY-Lite/total?style=plastic)
 
 ## Table of Content 
