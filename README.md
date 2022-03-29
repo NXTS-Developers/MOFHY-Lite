@@ -1,7 +1,7 @@
-## MOFHY Lite
+#### WARNING! This respatory is no longer maintained by its creator
+#### WARNING! This respatory has major security issues that have not yet been patched! By continuting to use this software, you acknowledge these security holes, and agree that no one but yourself is at fault when you get hacked.
 
-### WARNING! This respatory is no longer maintained by its creator
-### WARNING! This respatory has major security issues that have not yet been patched! By continuting to use this software, you acknowledge these security holes, and agree that no one but yourself is at fault when you get hacked.
+## MOFHY Lite
 
 MOFHY Lite is a priceless MyOwnFreeHost Client Area for account management, ticket support system and a free ssl service. It has easy to use features much like the WHMCS Digit UI interface. Visit the [offical website](https://getmofhy.eu.org)!
 
