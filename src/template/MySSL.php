@@ -6,7 +6,7 @@
 		</div>
 		<hr>
 		<div class="table-responsive">
-			<table class="table table-stripped">
+			<table class="table table-stripped" aria-describedby="All SSLs Table">
 				<thead>
 					<th width="5%">ID</th>
 					<th width="5%">Order ID</th>
@@ -46,7 +46,7 @@
 								echo '<span class="badge bg-danger badge-pill">Expired</span>';
 							}
 						?></td>
-						<td><a href="<?php echo $AreaInfo['area_url'];?>viewssl.php?ssl_id=<?php echo $SSLInfo['order_id'];?>" class="btn btn-rounded btn-sm btn-<?php echo $btn[0]?>"><i class="fa fa-<?php echo $btn[1]?>"></i>Manage</a></td>
+						<td><a href="<?php echo $AreaInfo['area_url'];?>viewssl.php?ssl_id=<?php echo $SSLInfo['order_id'];?>" class="btn btn-rounded btn-sm btn-<?php echo $btn[0]?>"><em class="fa fa-<?php echo $btn[1]?>"></em>Manage</a></td>
 					</tr>
 					<?php
 							}
