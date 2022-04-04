@@ -6,7 +6,7 @@
 		</div>
 		<hr>
 		<div class="table-responsive">
-			<table class="table table-stripped">
+			<table class="table table-stripped" aria-describedby="All Tickets Table">
 				<thead>
 					<th width="5%">ID</th>
 					<th width="80%">Subject</th>
@@ -50,7 +50,7 @@
 								echo '<span class="badge bg-danger badge-pill">Closed</span>';
 							}
 						?></td>
-						<td><a href="<?php echo $AreaInfo['area_url'];?>viewticket.php?ticket_id=<?php echo $TicketInfo['ticket_unique_id'];?>#reply" class="btn btn-sm btn-<?php echo $btn[0] ?> btn-rounded"><i class="fa fa-<?php echo $btn[1] ?>"></i> Manage</a></td>
+						<td><a href="<?php echo $AreaInfo['area_url'];?>viewticket.php?ticket_id=<?php echo $TicketInfo['ticket_unique_id'];?>#reply" class="btn btn-sm btn-<?php echo $btn[0] ?> btn-rounded"><em class="fa fa-<?php echo $btn[1] ?>"></em> Manage</a></td>
 					</tr>
 					<?php
 							}
