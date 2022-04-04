@@ -2,7 +2,7 @@
 	<div class="card py-0">
 		<div class="d-flex justify-content-between align-items-center pt-15 px-5">
 			<h5 class="m-0">New SSL</h5>
-			<a href="<?php echo $AreaInfo['area_url'];?>myssl.php" class="btn btn-sm btn-danger"><i class="fa fa-backward"></i> Return</a>
+			<a href="<?php echo $AreaInfo['area_url'];?>myssl.php" class="btn btn-sm btn-danger"><em class="fa fa-backward"></em> Return</a>
 		</div>
 		<hr>
 		<form action="function/NewSSL.php" method="post">
