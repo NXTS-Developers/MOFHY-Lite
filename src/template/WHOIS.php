@@ -2,7 +2,7 @@
 	<div class="card py-0">
 		<div class="d-flex justify-content-between align-items-center pt-15">
 			<h5 class="m-0">WHOIS Lookup</h5>
-			<a href="<?php echo $AreaInfo['area_url'];?>mytools.php" class="btn btn-sm btn-danger"><i class="fa fa-backward"></i> Return</a>
+			<a href="<?php echo $AreaInfo['area_url'];?>mytools.php" class="btn btn-sm btn-danger"><em class="fa fa-backward"></em> Return</a>
 		</div>
 		<hr>
 			<div class="row pb-20">
