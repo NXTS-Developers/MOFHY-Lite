@@ -2,7 +2,7 @@
 	<div class="card py-15">
 		<div class="d-flex justify-content-between align-items-center px-5">
 			<h5 class="m-0">My Settings</h5>
-			<a href="<?php echo $AreaInfo['area_url'];?>index.php" class="btn btn-danger btn-sm"><i class="fa fa-backward"></i> Return</a>
+			<a href="<?php echo $AreaInfo['area_url'];?>index.php" class="btn btn-danger btn-sm"><em class="fa fa-backward"></em> Return</a>
 		</div><hr>
 		  <form action="function/MySettings.php" method="post">
 			<div class="row">
