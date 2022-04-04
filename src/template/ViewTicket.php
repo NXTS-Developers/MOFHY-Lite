@@ -3,20 +3,20 @@
 		<div class="d-flex justify-content-between align-items-center pt-15">
 			<h5 class="m-0">Viewing Ticket #<?php echo htmlspecialchars($_GET['ticket_id'])
 			?></h5>
-			<a href="<?php echo $AreaInfo['area_url'];?>mytickets.php" class="btn btn-sm btn-danger"><i class="fa fa-backward"></i> Return</a>
+			<a href="<?php echo $AreaInfo['area_url'];?>mytickets.php" class="btn btn-sm btn-danger"><em class="fa fa-backward"></em> Return</a>
 		</div><hr>
 		<?php $TicketInfo = mysqli_fetch_assoc($sql);?>
 		<div class="mb-20">
 			<div class="row">
 				<div class="col-md-6">
 					<div class="d-flex justify-content-between align-items-center mx-10 my-5">
-						<b>Subject:</b>
+						<strong>Subject:</strong>
 						<span><?php echo str_rot13($TicketInfo['ticket_subject']);?></span>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="d-flex justify-content-between align-items-center mx-10 my-5">
-						<b>Status:</b>
+						<strong>Status:</strong>
 						<span><?php 
 							if($TicketInfo['ticket_status']=='0'){
 								echo '<span class="badge bg-success">Open</span>';
@@ -32,7 +32,7 @@
 				</div>
 				<div class="col-md-6">
 					<div class="d-flex justify-content-between align-items-center mx-10 my-5">
-						<b>Department:</b>
+						<strong>Department:</strong>
 						<span><?php 
 							if($TicketInfo['ticket_department']=='hosting'){
 								echo 'Hosting Issue';
@@ -57,7 +57,7 @@
 	</div>
 		<div class="card py-10">
 			<div class="d-flex justify-content-between align-items-center px-5">
-				<b class="py-5"><?php echo $ClientInfo['hosting_client_fname'].' - '.$ClientInfo['hosting_client_lname'];?></b>
+				<strong class="py-5"><?php echo $ClientInfo['hosting_client_fname'].' - '.$ClientInfo['hosting_client_lname'];?></strong>
 				<span><?php echo $TicketInfo['ticket_date'];?></span>
 			</div><hr>
 			<div class="px-10 m-5">
@@ -77,7 +77,7 @@
 	?>
 		<div class="card py-10">
 			<div class="d-flex justify-content-between align-items-center px-5">
-				<b class="py-5"><?php echo $From;?></b>
+				<strong class="py-5"><?php echo $From;?></strong>
 				<span><?php echo $ReplyInfo['reply_date'];?></span>
 			</div><hr>
 			<div class="px-10 m-5">
