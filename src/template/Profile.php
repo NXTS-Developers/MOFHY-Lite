@@ -2,30 +2,30 @@
 	<div class="card py-15">
 		<div class="d-flex justify-content-between align-items-center px-5">
 			<h5 class="m-0">My Profile</h5>
-			<a href="<?php echo $AreaInfo['area_url'];?>index.php" class="btn btn-danger btn-sm"><i class="fa fa-backward"></i> Return</a>
+			<a href="<?php echo $AreaInfo['area_url'];?>index.php" class="btn btn-danger btn-sm"><em class="fa fa-backward"></em> Return</a>
 		</div><hr>
 		<div class="row">
 			<div class="col-md-6">
-				<h6 class="mb-0"><b>First Name:</b> <?php echo $ClientInfo['hosting_client_fname'];?></h6>
+				<h6 class="mb-0"><strong>First Name:</strong> <?php echo $ClientInfo['hosting_client_fname'];?></h6>
 			</div>
 			<div class="col-md-6">
-				<h6 class="mb-0"><b>Last Name:</b> <?php echo $ClientInfo['hosting_client_lname'];?></h6>
+				<h6 class="mb-0"><strong>Last Name:</strong> <?php echo $ClientInfo['hosting_client_lname'];?></h6>
 			</div>
 			<div class="col-md-6">
-				<h6 class="mb-0"><b>Email Address:</b> <?php echo $ClientInfo['hosting_client_email'];?></h6>
+				<h6 class="mb-0"><strong>Email Address:</strong> <?php echo $ClientInfo['hosting_client_email'];?></h6>
 			</div>
 			<div class="col-md-6">
-				<h6 class="mb-0"><b>Phone Number:</b> <?php echo $ClientInfo['hosting_client_phone'];?></h6>
+				<h6 class="mb-0"><strong>Phone Number:</strong> <?php echo $ClientInfo['hosting_client_phone'];?></h6>
 			</div>
 
 			<div class="col-md-6">
-				<h6 class="mb-0"><b>Billing Address:</b> <?php echo $ClientInfo['hosting_client_address'];?></h6>
+				<h6 class="mb-0"><strong>Billing Address:</strong> <?php echo $ClientInfo['hosting_client_address'];?></h6>
 			</div>
 			<div class="col-md-6">
-				<h6 class="mb-0"><b>Company:</b> <?php echo $ClientInfo['hosting_client_company'];?></h6>
+				<h6 class="mb-0"><strong>Company:</strong> <?php echo $ClientInfo['hosting_client_company'];?></h6>
 			</div>
 			<div class="col-md-6">
-				<h6 class="mb-0"><b>Country:</b> <?php 
+				<h6 class="mb-0"><strong>Country:</strong> <?php 
 					$countries = array(
 						array("name"=>"Not Defined", "code"=>"NULL"),
 						array("name"=>"Andorra", "code"=>"AD"),
@@ -283,22 +283,22 @@
 				?></h6>
 			</div>
 			<div class="col-md-6">
-				<h6 class="mb-0"><b>City:</b> <?php echo $ClientInfo['hosting_client_city'];?></h6>
+				<h6 class="mb-0"><strong>City:</strong> <?php echo $ClientInfo['hosting_client_city'];?></h6>
 			</div>
 			<div class="col-md-6">
-				<h6 class="mb-0"><b>Postal Code:</b> <?php echo $ClientInfo['hosting_client_pcode'];?></h6>
+				<h6 class="mb-0"><strong>Postal Code:</strong> <?php echo $ClientInfo['hosting_client_pcode'];?></h6>
 			</div>
 			<div class="col-md-6">
-				<h6 class="mb-0"><b>IP Address:</b> <?php echo UserInfo::get_ip();?></h6>
+				<h6 class="mb-0"><strong>IP Address:</strong> <?php echo UserInfo::get_ip();?></h6>
 			</div>
 			<div class="col-md-6">
-				<h6 class="mb-0"><b>Device Type:</b> <?php echo UserInfo::get_device();?></h6>
+				<h6 class="mb-0"><strong>Device Type:</strong> <?php echo UserInfo::get_device();?></h6>
 			</div>
 			<div class="col-md-6">
-				<h6 class="mb-0"><b>Device OS:</b> <?php echo UserInfo::get_os();?></h6>
+				<h6 class="mb-0"><strong>Device OS:</strong> <?php echo UserInfo::get_os();?></h6>
 			</div>
 			<div class="col-md-6">
-				<h6 class="mb-0"><b>Web Browser:</b> <?php echo UserInfo::get_browser();?></h6>
+				<h6 class="mb-0"><strong>Web Browser:</strong> <?php echo UserInfo::get_browser();?></h6>
 			</div>
 			<div class="col-md-12 pb-5">
 				<a href="mysettings.php" class="btn m5t btn-sm btn-primary">Update Profile</a>
