@@ -9,12 +9,7 @@ if(isset($_POST['login'])){
 	if(mysqli_num_rows($sql)>0){
 		$Data = mysqli_fetch_assoc($sql);
 		if(trim($Data['admin_password'])==hash('sha256', $FormData['password'])){
-			if(isset($_POST['remember'])){
-				$_SESSION['LEASESS'] = base64_encode($Data['admin_key']);
-			}
-			else{
-				$_SESSION['LEASESS'] = base64_encode($Data['admin_key']);
-			}
+			$_SESSION['LEASESS'] = base64_encode($Data['admin_key']);
 			$_SESSION['message'] = '<div class="alert alert-success" role="alert">
 									  <button class="close" data-dismiss="alert" type="button" aria-label="Close">
 									    <span aria-hidden="true">&times;</span>
