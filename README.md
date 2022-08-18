@@ -2,7 +2,7 @@
 
 #### WARNING! This respatory is no longer maintained by its creator or maintainers!
 
-#### WARNING! This respatory has major security issues that have not yet been patched! By continuting to use this software, you acknowledge these security holes exsist, and that this code is not to be used in production.
+#### WARNING! This respatory has major security issues that have not yet been patched! By continuting to use this software, you acknowledge these security holes exsist, and that this code is not to be used in production. Please use [Xera](https://xera.eu.org) instead.
 
 ## MOFHY Lite
 
