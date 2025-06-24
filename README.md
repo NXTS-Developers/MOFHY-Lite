@@ -1,8 +1,18 @@
-# Warning! This software is NOT SECURE. Do not use this software for production, it can be hacked, revealing personal information in seconds. You can be held accountable by courts (Lawsuits, etc) for allowing private user data out.
+## ⚠️ WARNING: This Software is **NOT SECURE**
 
-#### WARNING! This respatory is no longer maintained by its creator or maintainers!
+**Do NOT use this software in production.**  
+It contains **critical security vulnerabilities** that can expose sensitive personal information within seconds.
 
-#### WARNING! This respatory has major security issues that have not yet been patched! By continuting to use this software, you acknowledge these security holes exsist, and that this code is not to be used in production. Please use [Xera](https://xera.eu.org) instead.
+Using this software in a live environment could lead to **data breaches**, **lawsuits**, and **legal accountability**.
+
+### ⚠️ This repository is no longer maintained.
+The original author and maintainers have **abandoned this project**.
+
+### ⚠️ Known Security Issues Remain Unpatched.
+By continuing to use this software, you **accept full responsibility** for the risks involved.
+
+Please use **[Xera](https://xera.eu.org)** — a modern, secure, and actively maintained replacement.
+
 
 ## MOFHY Lite
 
